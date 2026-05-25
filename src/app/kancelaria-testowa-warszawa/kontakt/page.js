@@ -1,109 +1,79 @@
 "use client";
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-export default function Contact() {
+const fade = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } };
+
+const info = [
+  { icon: MapPin, label: "Visit Us", value: "ul. Testowa 1, Warszawa" },
+  { icon: Phone, label: "Call Us", value: "123 456 789" },
+  { icon: Mail, label: "Email Us", value: "contact@kancelaria-testowa-warszawa.com" },
+];
+
+export default function LawContact() {
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 font-sans">
+    <main className="bg-slate-950 text-white">
       <Navbar slug="kancelaria-testowa-warszawa" companyName="Kancelaria Testowa" />
-      <main className="flex-grow">
-        
-        <section className="py-20 bg-slate-900 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-10"></div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <motion.div 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Skontaktuj się z nami</h1>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Nie czekaj, aż Twój problem prawny eskaluje. Napisz lub zadzwoń. Zapewniamy pełną dyskrecję i błyskawiczną reakcję.
-              </p>
-            </motion.div>
-          </div>
-        </section>
 
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              
-              {/* Informacje kontaktowe */}
-              <motion.div 
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl font-bold text-slate-900 mb-8">Dane Kontaktowe</h2>
-                
-                <div className="space-y-8">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center shrink-0 mr-6">
-                      <MapPin className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-slate-900">Siedziba Główna</h4>
-                      <p className="text-slate-600 mt-1">ul. Złota 44, 00-120 Warszawa</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center shrink-0 mr-6">
-                      <Phone className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-slate-900">Telefon Całodobowy</h4>
-                      <p className="text-slate-600 mt-1 text-2xl font-semibold">+48 500 123 456</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center shrink-0 mr-6">
-                      <Mail className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold text-slate-900">E-mail</h4>
-                      <p className="text-slate-600 mt-1">biuro@kancelaria-testowa.pl</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+      {/* Header */}
+      <section className="relative pt-32 pb-20 text-center px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#D4A853]/5 to-transparent" />
+        <motion.p initial="hidden" animate="visible" variants={fade} transition={{ duration: 0.6 }} className="relative text-[#D4A853] tracking-[.3em] uppercase text-sm mb-4">Get in Touch</motion.p>
+        <motion.h1 initial="hidden" animate="visible" variants={fade} transition={{ duration: 0.8, delay: 0.1 }} className="relative font-serif text-5xl md:text-6xl font-bold mb-4">Contact {"Kancelaria Testowa"}</motion.h1>
+        <motion.p initial="hidden" animate="visible" variants={fade} transition={{ duration: 0.8, delay: 0.2 }} className="relative text-slate-400 text-lg max-w-md mx-auto">Schedule your free consultation — we respond within 24 hours.</motion.p>
+      </section>
 
-              {/* Formularz Glassmorphism */}
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-slate-50 p-10 rounded-3xl border border-slate-200 shadow-xl"
-              >
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Napisz wiadomość</h3>
-                <form className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Imię i Nazwisko</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all" placeholder="Jan Kowalski" />
+      {/* Two-Column */}
+      <section className="max-w-6xl mx-auto px-6 pb-28">
+        <div className="grid lg:grid-cols-5 gap-12">
+          {/* Left — Contact Info */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.7 }} className="lg:col-span-2 space-y-8">
+            <h2 className="font-serif text-2xl font-semibold mb-2">Reach Our Team</h2>
+            <p className="text-slate-400 leading-relaxed">Whether you need urgent legal advice or want to discuss your case in detail, our {"prawnik"} attorneys in {"Warszawa"} are ready to help.</p>
+            <div className="space-y-6 pt-4">
+              {info.map((item, i) => (
+                <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#D4A853]/10 flex items-center justify-center shrink-0">
+                    <item.icon className="w-5 h-5 text-[#D4A853]" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Adres E-mail</label>
-                    <input type="email" className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all" placeholder="jan@example.com" />
+                    <p className="text-sm text-slate-500 mb-0.5">{item.label}</p>
+                    <p className="text-slate-200 font-medium">{item.value}</p>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Twoja Wiadomość</label>
-                    <textarea rows="4" className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none transition-all" placeholder="Opisz krótko swój problem..."></textarea>
-                  </div>
-                  <button type="button" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-colors shadow-lg shadow-blue-500/30">
-                    Wyślij Zapytanie
-                  </button>
-                </form>
-              </motion.div>
-
+                </motion.div>
+              ))}
             </div>
-          </div>
-        </section>
+          </motion.div>
 
-      </main>
+          {/* Right — Form */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.7, delay: 0.15 }} className="lg:col-span-3">
+            <form className="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 md:p-10 space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm text-slate-400 mb-2">Full Name</label>
+                  <input type="text" placeholder="John Doe" className="w-full bg-slate-800/60 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#D4A853]/60 transition-colors" />
+                </div>
+                <div>
+                  <label className="block text-sm text-slate-400 mb-2">Email Address</label>
+                  <input type="email" placeholder="john@example.com" className="w-full bg-slate-800/60 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#D4A853]/60 transition-colors" />
+                </div>
+              </div>
+              <div>
+                <label className="block text-sm text-slate-400 mb-2">How Can We Help?</label>
+                <textarea rows={5} placeholder="Describe your legal matter..." className="w-full bg-slate-800/60 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-[#D4A853]/60 transition-colors resize-none" />
+              </div>
+              <button type="submit" className="w-full bg-[#D4A853] hover:bg-[#c49a48] text-slate-950 font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2 text-lg">
+                Send Message <ArrowRight className="w-5 h-5" />
+              </button>
+            </form>
+          </motion.div>
+        </div>
+      </section>
+
       <Footer companyName="Kancelaria Testowa" />
-    </div>
+    </main>
   );
 }
