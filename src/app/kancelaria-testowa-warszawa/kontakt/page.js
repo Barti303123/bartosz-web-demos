@@ -15,7 +15,7 @@ const info = [
 export default function LawContact() {
   return (
     <main className="bg-slate-950 text-white">
-      <Navbar slug="kancelaria-testowa-warszawa" companyName="Kancelaria Testowa" />
+      <Navbar slug="kancelaria-testowa-warszawa" companyName="Kancelaria Testowa" dark />
 
       {/* Header */}
       <section className="relative pt-32 pb-20 text-center px-6 overflow-hidden">

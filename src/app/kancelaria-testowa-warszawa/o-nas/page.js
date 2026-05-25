@@ -16,7 +16,7 @@ const stats = [
 export default function LawAbout() {
   return (
     <main className="bg-slate-950 text-white">
-      <Navbar slug="kancelaria-testowa-warszawa" companyName="Kancelaria Testowa" />
+      <Navbar slug="kancelaria-testowa-warszawa" companyName="Kancelaria Testowa" dark />
 
       {/* Header */}
       <section className="pt-32 pb-12 text-center px-6">

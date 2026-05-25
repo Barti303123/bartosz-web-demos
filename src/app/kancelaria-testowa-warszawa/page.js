@@ -15,7 +15,7 @@ const features = [
 export default function LawHome() {
   return (
     <main className="bg-slate-950 text-white">
-      <Navbar slug="kancelaria-testowa-warszawa" companyName="Kancelaria Testowa" />
+      <Navbar slug="kancelaria-testowa-warszawa" companyName="Kancelaria Testowa" dark />
 
       {/* Hero */}
       <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
