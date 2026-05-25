@@ -9,7 +9,7 @@ import {
   Phone,
   Clock,
   Laptop,
-  Oil,
+  Droplet,
   Disc,
   Snowflake,
   Tractor, // Changed from Tyre for a more robust mechanic feel
@@ -65,7 +65,7 @@ const services = [
       "Wykrywamy usterki z chirurgiczną dokładnością, oszczędzając Twój czas i pieniądze.",
   },
   {
-    icon: Oil,
+    icon: Droplet,
     title: "Kompleksowa Wymiana Oleju i Filtrów",
     description:
       "Zapewnij swojemu silnikowi długie życie dzięki regularnej, profesjonalnej wymianie płynów.",
