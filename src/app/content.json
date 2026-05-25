@@ -1,0 +1,33 @@
+{
+  "companyName": "{{COMPANY_NAME}}",
+  "companyCity": "{{COMPANY_CITY}}",
+  "companyPhone": "{{COMPANY_PHONE}}",
+  "companyAddress": "{{COMPANY_ADDRESS}}",
+  "theme": {
+    "primary": "#8b5cf6",
+    "secondary": "#3b82f6"
+  },
+  "hero": {
+    "badge": "Najlepszy wybór w mieście {{COMPANY_CITY}}",
+    "title": "Przyszłość Twojej branży jest tutaj.",
+    "subtitle": "Przenieś swoje oczekiwania na wyższy poziom z {{COMPANY_NAME}}. Innowacyjne podejście, najwyższa jakość i setki zadowolonych klientów."
+  },
+  "services": [
+    {
+      "title": "Błyskawiczna realizacja",
+      "description": "Nasz zespół dba o to, by każde zlecenie w mieście {{COMPANY_CITY}} było wykonane przed czasem, zachowując perfekcyjną jakość."
+    },
+    {
+      "title": "100% Gwarancji",
+      "description": "Bezpieczeństwo i zaufanie to nasz fundament. Jesteśmy pewni swoich umiejętności na każdym etapie."
+    },
+    {
+      "title": "Jakość Premium",
+      "description": "Najlepsze materiały i dbałość o każdy detal to coś, co wyróżnia nas na tle konkurencji."
+    }
+  ],
+  "cta": {
+    "title": "Dołącz do liderów.",
+    "subtitle": "Wybierz {{COMPANY_NAME}} i przekonaj się na własnej skórze, jak wygląda współpraca z profesjonalistami z Twojej okolicy."
+  }
+}
