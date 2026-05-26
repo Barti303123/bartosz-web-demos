@@ -91,7 +91,7 @@ export default function LawContact() {
                 <button onClick={() => setSubmitted(false)} className="mt-4 text-sm text-[#D4A853] hover:underline">Wyślij kolejną testową wiadomość</button>
               </div>
             )}
-        </div>
+          </motion.div>
       </section>
 
       <Footer companyName="prawnik antek" />
