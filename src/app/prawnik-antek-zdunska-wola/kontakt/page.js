@@ -92,6 +92,7 @@ export default function LawContact() {
               </div>
             )}
           </motion.div>
+        </div>
       </section>
 
       <Footer companyName="prawnik antek" />
