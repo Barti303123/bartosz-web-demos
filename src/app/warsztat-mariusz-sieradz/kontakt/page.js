@@ -83,7 +83,7 @@ export default function AutoContact() {
                 <h3 className="text-2xl font-bold text-emerald-500">Sukces! Formularz działa.</h3>
                 <p className="text-neutral-400 text-sm leading-relaxed max-w-md">
                   To jest testowa strona DEMO wygenerowana przez AI. W docelowej pełnej wersji systemu, wszystkie zapytania od klientów będą błyskawicznie trafiać prosto na Twoją skrzynkę pocztową: <br/>
-                  <strong className="text-white text-base mt-2 block">{"Twojego maila"}</strong>
+                  <strong className="text-white text-base mt-2 block">{"kontakt@bartosz-web.pl"}</strong>
                 </p>
                 <button onClick={() => setSubmitted(false)} className="mt-4 text-xs font-semibold uppercase tracking-wider text-red-500 hover:text-red-400 transition-colors">Wyślij ponownie</button>
               </div>
