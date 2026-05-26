@@ -7,10 +7,10 @@ import Footer from "@/components/Footer";
 const fade = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } };
 
 const stats = [
-  { icon: Clock, value: "15+", label: "Years of Practice" },
-  { icon: Award, value: "2,400+", label: "Cases Won" },
-  { icon: Users, value: "98%", label: "Client Satisfaction" },
-  { icon: Briefcase, value: "50+", label: "Legal Experts" },
+  { icon: Clock, value: "15+", label: "Lata praktyki" },
+  { icon: Award, value: "2,400+", label: "Wygrane sprawy" },
+  { icon: Users, value: "98%", label: "Zadowolenie klientów" },
+  { icon: Briefcase, value: "50+", label: "Ekspertów prawnych" },
 ];
 
 export default function LawAbout() {
@@ -20,7 +20,7 @@ export default function LawAbout() {
 
       {/* Header */}
       <section className="pt-32 pb-12 text-center px-6">
-        <motion.p initial="hidden" animate="visible" variants={fade} transition={{ duration: 0.6 }} className="text-[#D4A853] tracking-[.3em] uppercase text-sm mb-4">About the Firm</motion.p>
+        <motion.p initial="hidden" animate="visible" variants={fade} transition={{ duration: 0.6 }} className="text-[#D4A853] tracking-[.3em] uppercase text-sm mb-4">O Kancelarii</motion.p>
         <motion.h1 initial="hidden" animate="visible" variants={fade} transition={{ duration: 0.8, delay: 0.1 }} className="font-serif text-5xl md:text-6xl font-bold">{"Kancelaria Testowa"}</motion.h1>
       </section>
 
@@ -28,10 +28,10 @@ export default function LawAbout() {
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.7 }}>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 leading-tight">A Legacy of Justice<br />in <span className="text-[#D4A853]">{"Warszawa"}</span></h2>
-            <p className="text-slate-300 leading-relaxed mb-5">For over 15 years, {"Kancelaria Testowa"} has been the trusted name in {"prawnik"} across {"Warszawa"}. Our attorneys combine deep legal knowledge with an unwavering commitment to every client.</p>
-            <p className="text-slate-400 leading-relaxed mb-8">From complex litigation to sensitive negotiations, we bring strategic clarity and relentless preparation. Our office at {"ul. Testowa 1"} serves as the cornerstone of our community practice.</p>
-            <a href={`/site/kancelaria-testowa-warszawa/contact`} className="inline-block border-2 border-[#D4A853] text-[#D4A853] hover:bg-[#D4A853] hover:text-slate-950 font-semibold px-8 py-3 rounded transition-colors">Contact Us</a>
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold mb-6 leading-tight">Dziedzictwo sprawiedliwości<br />w <span className="text-[#D4A853]">{"Warszawa"}</span></h2>
+            <p className="text-slate-300 leading-relaxed mb-5">Od ponad 15 lat {"Kancelaria Testowa"} jest zaufaną nazwą w dziedzinie {"prawnik"} w {"Warszawa"}. Nasi prawnicy łączą głęboką wiedzę prawniczą z niezachwianym zaangażowaniem w sprawy każdego klienta.</p>
+            <p className="text-slate-400 leading-relaxed mb-8">Od skomplikowanych sporów sądowych po delikatne negocjacje, wnosimy strategiczną jasność i nieustępliwe przygotowanie. Nasze biuro przy {"ul. Testowa 1"} stanowi fundament naszej praktyki społecznej.</p>
+            <a href={`/site/kancelaria-testowa-warszawa/contact`} className="inline-block border-2 border-[#D4A853] text-[#D4A853] hover:bg-[#D4A853] hover:text-slate-950 font-semibold px-8 py-3 rounded transition-colors">Skontaktuj się z nami</a>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.7, delay: 0.2 }} className="relative">
@@ -39,7 +39,7 @@ export default function LawAbout() {
             {/* Glassmorphism overlay card */}
             <div className="absolute -bottom-8 -left-6 md:-left-10 backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-6 shadow-2xl max-w-[240px]">
               <p className="text-3xl font-serif font-bold text-[#D4A853] mb-1">2,400+</p>
-              <p className="text-sm text-slate-200">Cases successfully resolved for our clients</p>
+              <p className="text-sm text-slate-200">Sprawy pomyślnie rozwiązane dla naszych klientów</p>
             </div>
           </motion.div>
         </div>
@@ -63,8 +63,8 @@ export default function LawAbout() {
       {/* Mission CTA */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.8 }}
         className="mx-6 mb-20 max-w-4xl lg:mx-auto bg-gradient-to-r from-slate-900 to-slate-900/50 border border-slate-800 rounded-3xl p-12 md:p-16 text-center">
-        <h3 className="font-serif text-3xl md:text-4xl font-bold mb-4">Our Mission</h3>
-        <p className="text-slate-300 max-w-xl mx-auto text-lg leading-relaxed">To provide every client with the same caliber of legal representation once reserved for the privileged few — with transparency, integrity, and resolve.</p>
+        <h3 className="font-serif text-3xl md:text-4xl font-bold mb-4">Nasza misja</h3>
+        <p className="text-slate-300 max-w-xl mx-auto text-lg leading-relaxed">Zapewnienie każdemu klientowi takiego samego kalibru reprezentacji prawnej, jaki niegdyś był zarezerwowany dla nielicznych uprzywilejowanych — z przejrzystością, uczciwością i determinacją.</p>
       </motion.section>
 
       <Footer companyName="Kancelaria Testowa" />

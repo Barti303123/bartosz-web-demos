@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 const fade = { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } };
 
 const features = [
-  { icon: Shield, title: "Aggressive Defense", desc: "We fight relentlessly to protect your rights, reputation, and future in every case we take." },
-  { icon: Scale, title: "Fair Outcomes", desc: "Our track record proves we deliver justice — maximizing settlements and winning verdicts." },
-  { icon: Gavel, title: "Trial-Ready", desc: "When negotiation fails, our courtroom experience gives you the decisive edge." },
+  { icon: Shield, title: "Skuteczna obrona", desc: "Nieustępliwie walczymy o Twoje prawa, reputację i przyszłość w każdej prowadzonej sprawie." },
+  { icon: Scale, title: "Uczciwe rezultaty", desc: "Nasze doświadczenie udowadnia, że wymierzamy sprawiedliwość — maksymalizując ugody i wygrywając procesy." },
+  { icon: Gavel, title: "Gotowi do procesu", desc: "Gdy negocjacje zawodzą, nasze doświadczenie na sali sądowej daje Ci decydującą przewagę." },
 ];
 
 export default function LawHome() {
@@ -23,15 +23,15 @@ export default function LawHome() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/70 to-slate-950" />
         <motion.div initial="hidden" animate="visible" variants={fade} transition={{ duration: 1 }} className="relative z-10 text-center max-w-3xl px-6">
           <p className="text-[#D4A853] tracking-[.35em] uppercase text-sm font-medium mb-4">prawnik</p>
-          <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">Unyielding Legal<br />Protection</h1>
-          <p className="text-slate-300 text-lg md:text-xl max-w-xl mx-auto mb-10">{"Kancelaria Testowa"} delivers decisive counsel and fierce advocacy when the stakes are highest.</p>
-          <a href={`/site/kancelaria-testowa-warszawa/contact`} className="inline-block bg-[#D4A853] hover:bg-[#c49a48] text-slate-950 font-semibold px-10 py-4 rounded transition-colors text-lg">Free Consultation</a>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6">Niezłomna ochrona<br />prawna</h1>
+          <p className="text-slate-300 text-lg md:text-xl max-w-xl mx-auto mb-10">{"Kancelaria Testowa"} zapewnia stanowcze doradztwo i zaciekłą obronę, gdy stawka jest najwyższa.</p>
+          <a href={`/site/kancelaria-testowa-warszawa/contact`} className="inline-block bg-[#D4A853] hover:bg-[#c49a48] text-slate-950 font-semibold px-10 py-4 rounded transition-colors text-lg">Bezpłatna konsultacja</a>
         </motion.div>
       </section>
 
       {/* Features */}
       <section className="max-w-6xl mx-auto px-6 py-28">
-        <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.7 }} className="font-serif text-4xl md:text-5xl text-center mb-4">Why Clients Choose Us</motion.h2>
+        <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.7 }} className="font-serif text-4xl md:text-5xl text-center mb-4">Dlaczego klienci nas wybierają</motion.h2>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.7, delay: 0.15 }} className="w-16 h-1 bg-[#D4A853] mx-auto mb-16 rounded-full" />
         <div className="grid md:grid-cols-3 gap-10">
           {features.map((f, i) => (
@@ -50,9 +50,9 @@ export default function LawHome() {
       {/* CTA */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade} transition={{ duration: 0.8 }}
         className="mx-6 mb-20 max-w-5xl lg:mx-auto rounded-3xl bg-gradient-to-br from-[#D4A853]/15 to-slate-900 border border-[#D4A853]/20 p-12 md:p-20 text-center">
-        <h2 className="font-serif text-3xl md:text-5xl font-bold mb-5">Your Future Deserves a<br />Powerful Advocate</h2>
-        <p className="text-slate-300 max-w-lg mx-auto mb-10 text-lg">Call {"123 456 789"} or schedule online — the first consultation is always free.</p>
-        <a href={`/site/kancelaria-testowa-warszawa/contact`} className="inline-block bg-[#D4A853] hover:bg-[#c49a48] text-slate-950 font-bold px-12 py-4 rounded transition-colors text-lg">Get Started Today</a>
+        <h2 className="font-serif text-3xl md:text-5xl font-bold mb-5">Twoja przyszłość zasługuje na<br />potężnego obrońcę</h2>
+        <p className="text-slate-300 max-w-lg mx-auto mb-10 text-lg">Zadzwoń pod numer {"123 456 789"} lub umów się online — pierwsza konsultacja jest zawsze darmowa.</p>
+        <a href={`/site/kancelaria-testowa-warszawa/contact`} className="inline-block bg-[#D4A853] hover:bg-[#c49a48] text-slate-950 font-bold px-12 py-4 rounded transition-colors text-lg">Zacznij już dziś</a>
       </motion.section>
 
       <Footer companyName="Kancelaria Testowa" />
