@@ -55,7 +55,7 @@ export default function Home() {
                 Nowa Kolekcja
               </span>
               <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                {{COMPANY_NAME}} - Twój Sklep Internetowy
+                Barti Kwiaty - Twój Sklep Internetowy
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
                 Najlepsze produkty w sieci. Odkryj naszą nową kolekcję i ciesz się wyjątkową jakością z błyskawiczną dostawą.
