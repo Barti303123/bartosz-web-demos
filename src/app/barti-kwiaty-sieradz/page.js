@@ -8,8 +8,8 @@ import { createClient } from 'next-sanity';
 import { ArrowRight, ShoppingBag } from 'lucide-react';
 
 const client = createClient({
-    projectId: '{{SANITY_PROJECT_ID}}',
-    dataset: '{{SANITY_DATASET}}',
+    projectId: 'v7p2x9r1', // Przykładowe fallback, Vercel build to zignoruje jeśli przejdzie regex
+    dataset: 'production',
     apiVersion: '2024-01-01',
     useCdn: false
 });
