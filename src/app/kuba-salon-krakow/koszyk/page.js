@@ -35,7 +35,7 @@ export default function Cart() {
               </div>
               <h2 className="text-xl font-bold text-gray-900 mb-2">Twój koszyk jest pusty</h2>
               <p className="text-gray-500 mb-6">Wygląda na to, że nie dodałeś jeszcze żadnych produktów.</p>
-              <Link href="/" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors">
+              <Link href="/kuba-salon-krakow" className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-medium transition-colors">
                 Wróć do sklepu
               </Link>
             </div>
