@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import CartIcon from './CartIcon';
 
-export default function NavbarEcommerce() {
+export default function NavbarEcommerce({ companyName = 'Twój Sklep', phone = '+48 500 123 456', email = 'kontakt@sklep.pl' }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -25,7 +25,7 @@ export default function NavbarEcommerce() {
         
         <Link href="/" className="flex items-center gap-2 relative z-50">
           <span className={`text-2xl font-black tracking-tight ${isScrolled ? 'text-gray-900' : 'text-gray-900'} transition-colors`}>
-            {{COMPANY_NAME}}
+            {companyName}
           </span>
         </Link>
 
@@ -33,9 +33,9 @@ export default function NavbarEcommerce() {
         <div className="hidden md:flex items-center gap-8">
           <Link href="/#produkty" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Katalog</Link>
           <Link href="/#o-nas" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">O nas</Link>
-          <a href="tel:{{PHONE}}" className="flex items-center gap-2 text-gray-600 hover:text-blue-600 font-medium transition-colors">
+          <a href={`tel:${phone}`} className="flex items-center gap-2 text-gray-600 hover:text-blue-600 font-medium transition-colors">
             <Phone className="w-4 h-4" />
-            {{PHONE}}
+            {phone}
           </a>
           
           <div className="pl-4 border-l border-gray-200">
@@ -65,13 +65,13 @@ export default function NavbarEcommerce() {
         </div>
         
         <div className="mt-auto pb-12 space-y-6">
-          <a href="tel:{{PHONE}}" className="flex items-center gap-3 text-gray-600">
+          <a href={`tel:${phone}`} className="flex items-center gap-3 text-gray-600">
             <Phone className="w-5 h-5 text-blue-600" />
-            <span>{{PHONE}}</span>
+            <span>{phone}</span>
           </a>
-          <a href="mailto:{{EMAIL}}" className="flex items-center gap-3 text-gray-600">
+          <a href={`mailto:${email}`} className="flex items-center gap-3 text-gray-600">
             <Mail className="w-5 h-5 text-blue-600" />
-            <span>{{EMAIL}}</span>
+            <span>{email}</span>
           </a>
         </div>
       </div>
