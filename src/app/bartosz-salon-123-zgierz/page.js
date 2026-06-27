@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-50 selection:bg-blue-100 selection:text-blue-900 font-sans flex flex-col">
-      <NavbarEcommerce companyName="Bartosz Salon 123" phone="+48 500 123 456" email="Twojego maila" />
+      <NavbarEcommerce companyName="Bartosz Salon 123" phone="+48 500 123 456" email="Twojego maila" slug="bartosz-salon-123-zgierz" />
       
       <main className="flex-grow pt-24">
         {/* Hero Section */}

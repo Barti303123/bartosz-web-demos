@@ -19,7 +19,7 @@ export default function Cart() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans flex flex-col">
-      <NavbarEcommerce companyName="Bartosz Salon 123" phone="+48 500 123 456" email="Twojego maila" />
+      <NavbarEcommerce companyName="Bartosz Salon 123" phone="+48 500 123 456" email="Twojego maila" slug="bartosz-salon-123-zgierz" />
       
       <main className="flex-grow pt-24 pb-12 px-6 sm:px-12 md:px-24">
         <div className="max-w-7xl mx-auto">
