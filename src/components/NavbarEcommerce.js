@@ -41,13 +41,13 @@ export default function NavbarEcommerce({ companyName = 'Twój Sklep', phone = '
           </a>
           
           <div className="pl-4 border-l border-gray-200">
-             <CartIcon />
+             <CartIcon slug={slug} />
           </div>
         </div>
 
         {/* Mobile Toggle */}
         <div className="md:hidden flex items-center gap-4 relative z-50">
-          <CartIcon />
+          <CartIcon slug={slug} />
           <button 
             className={`p-2 ${isMobileMenuOpen ? 'text-gray-900' : 'text-gray-900'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
