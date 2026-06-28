@@ -1,5 +1,12 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { persist, createJSONStorage } from 'zustand/middleware';
+
+// Fallback dla iFrame, jeśli przeglądarka zablokuje 3rd-party localStorage
+const safeStorage = {
+  getItem: (name) => { try { return localStorage.getItem(name); } catch(e) { return null; } },
+  setItem: (name, value) => { try { localStorage.setItem(name, value); } catch(e) {} },
+  removeItem: (name) => { try { localStorage.removeItem(name); } catch(e) {} }
+};
 
 export const useCart = create(
   persist(
@@ -48,11 +55,12 @@ export const useCart = create(
       },
       
       getCartCount: () => {
-        return get().items.reduce((total, item) => total + item.quantity, 0);
-      }
+        return get().items.reduce((count, item) => count + item.quantity, 0);
+      },
     }),
     {
-      name: 'ecommerce-cart',
+      name: 'cart-storage',
+      storage: createJSONStorage(() => safeStorage),
     }
   )
 );

@@ -19,7 +19,7 @@ export default function LeadLayout({ children }) {
       "addressLocality": "Internet (Czatbot)"
     },
     "telephone": "+48 500 123 456",
-    "email": "testowylol@gmail.com"
+    "email": "farti303pg@gmail.com"
   };
 
   return (

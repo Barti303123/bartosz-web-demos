@@ -100,7 +100,7 @@ export default function DefaultContact() {
                 <h3 className="text-2xl font-bold text-emerald-700">Sukces! Formularz działa.</h3>
                 <p className="text-gray-600 text-sm leading-relaxed max-w-md">
                   To jest testowa strona DEMO wygenerowana przez AI. W docelowej pełnej wersji, wszystkie zapytania od klientów będą błyskawicznie trafiać prosto na Twoją skrzynkę pocztową: <br/>
-                  <strong className="text-gray-900 text-base mt-2 block">{"testowylol@gmail.com"}</strong>
+                  <strong className="text-gray-900 text-base mt-2 block">{"farti303pg@gmail.com"}</strong>
                 </p>
                 <button onClick={() => setSubmitted(false)} className="mt-4 text-xs font-semibold uppercase tracking-wider text-blue-600 hover:text-blue-500 transition-colors">Wyślij ponownie</button>
               </div>
