@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-50 selection:bg-blue-100 selection:text-blue-900 font-sans flex flex-col">
-      <NavbarEcommerce companyName="SUPER SKLEP" phone="+48 500 123 456" email="Twojego maila" slug="super-sklep-lodz" />
+      <NavbarEcommerce companyName="SUPER SKLEP" phone="+48 500 123 456" email="bartosz.waw@vp.pl" slug="super-sklep-lodz" />
       
       <main className="flex-grow pt-24">
         {/* Hero Section */}

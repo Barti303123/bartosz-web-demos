@@ -19,7 +19,7 @@ export default function LeadLayout({ children }) {
       "addressLocality": "Łódź"
     },
     "telephone": "+48 500 123 456",
-    "email": "Twojego maila"
+    "email": "bartosz.waw@vp.pl"
   };
 
   return (

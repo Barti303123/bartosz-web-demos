@@ -67,7 +67,7 @@ export default function ProductDetail({ params }) {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans flex flex-col">
-      <NavbarEcommerce companyName="SUPER SKLEP" phone="+48 500 123 456" email="Twojego maila" slug="super-sklep-lodz" />
+      <NavbarEcommerce companyName="SUPER SKLEP" phone="+48 500 123 456" email="bartosz.waw@vp.pl" slug="super-sklep-lodz" />
       
       <main className="flex-grow pt-24 pb-12 px-6 sm:px-12 md:px-24">
         <div className="max-w-6xl mx-auto">
