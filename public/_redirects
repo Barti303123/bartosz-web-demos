@@ -139,3 +139,7 @@
 /super-sklep-jacek-lodz /super-sklep-jacek-lodz/index.html 200
 /super-sklep-jacek-lodz/koszyk /super-sklep-jacek-lodz/koszyk/index.html 200
 /super-sklep-jacek-lodz/produkt/:product_slug /super-sklep-jacek-lodz/produkt/[slug]/index.html 200
+
+/ania-salon-sieradz /ania-salon-sieradz/index.html 200
+/ania-salon-sieradz/o-nas /ania-salon-sieradz/o-nas/index.html 200
+/ania-salon-sieradz/kontakt /ania-salon-sieradz/kontakt/index.html 200
