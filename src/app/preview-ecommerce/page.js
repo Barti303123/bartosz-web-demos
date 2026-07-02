@@ -45,15 +45,15 @@ export default function Home() {
                 Nowa Kolekcja
               </span>
               <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                {{HERO_TITLE}}
+                Podgląd Szablonu - Twój Sklep Internetowy
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
-                {{HERO_SUBTITLE}}
+                Najlepsze produkty w sieci. Odkryj naszą nową kolekcję i ciesz się wyjątkową jakością z błyskawiczną dostawą.
               </p>
               <div className="pt-4 flex flex-wrap gap-4">
                 <a href="#produkty" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-lg transition-all shadow-lg shadow-blue-600/20 active:scale-95">
                   <ShoppingBag className="w-5 h-5" />
-                  {{HERO_CTA}}
+                  Zobacz Katalog
                 </a>
               </div>
             </div>
