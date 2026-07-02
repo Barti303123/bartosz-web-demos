@@ -119,3 +119,7 @@
 /bartosz-silownia-krakow /bartosz-silownia-krakow/index.html 200
 /bartosz-silownia-krakow/o-nas /bartosz-silownia-krakow/o-nas/index.html 200
 /bartosz-silownia-krakow/kontakt /bartosz-silownia-krakow/kontakt/index.html 200
+
+/super-sklep-lodz /super-sklep-lodz/index.html 200
+/super-sklep-lodz/koszyk /super-sklep-lodz/koszyk/index.html 200
+/super-sklep-lodz/produkt/:product_slug /super-sklep-lodz/produkt/[slug]/index.html 200
