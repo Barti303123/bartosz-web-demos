@@ -127,3 +127,7 @@
 /amazing-sklep-krakow /amazing-sklep-krakow/index.html 200
 /amazing-sklep-krakow/koszyk /amazing-sklep-krakow/koszyk/index.html 200
 /amazing-sklep-krakow/produkt/:product_slug /amazing-sklep-krakow/produkt/[slug]/index.html 200
+
+/anna-salon-zgierz /anna-salon-zgierz/index.html 200
+/anna-salon-zgierz/o-nas /anna-salon-zgierz/o-nas/index.html 200
+/anna-salon-zgierz/kontakt /anna-salon-zgierz/kontakt/index.html 200
