@@ -123,3 +123,7 @@
 /super-sklep-lodz /super-sklep-lodz/index.html 200
 /super-sklep-lodz/koszyk /super-sklep-lodz/koszyk/index.html 200
 /super-sklep-lodz/produkt/:product_slug /super-sklep-lodz/produkt/[slug]/index.html 200
+
+/amazing-sklep-krakow /amazing-sklep-krakow/index.html 200
+/amazing-sklep-krakow/koszyk /amazing-sklep-krakow/koszyk/index.html 200
+/amazing-sklep-krakow/produkt/:product_slug /amazing-sklep-krakow/produkt/[slug]/index.html 200
