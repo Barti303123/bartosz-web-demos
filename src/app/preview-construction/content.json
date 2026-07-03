@@ -1,0 +1,48 @@
+{
+  "_schema": 1,
+  "meta": {
+    "title": "Solidne usługi budowlane i remontowe",
+    "description": "Profesjonalne wykonawstwo, remonty i wykończenia. Rzetelnie, terminowo i z dbałością o każdy detal. Zapraszamy do kontaktu."
+  },
+  "hero": {
+    "title": "Solidne wykonanie, na którym możesz polegać",
+    "subtitle": "Realizujemy prace budowlane, remontowe i wykończeniowe dla klientów z regionu. Stawiamy na jakość, terminowość i uczciwe warunki.",
+    "cta": "Skontaktuj się z nami"
+  },
+  "about": {
+    "heading": "Doświadczenie, rzetelność i lokalne zaufanie",
+    "body": "Jesteśmy lokalną firmą, która z zaangażowaniem podchodzi do każdego zlecenia. Dbamy o czystość pracy, dobre materiały i rozwiązania dopasowane do potrzeb klienta — od drobnych napraw po większe realizacje."
+  },
+  "services": [
+    {
+      "title": "Prace wykończeniowe",
+      "description": "Kompleksowe wykończenia wnętrz — od przygotowania powierzchni po perfekcyjne detale gotowe do użytkowania."
+    },
+    {
+      "title": "Remonty i modernizacje",
+      "description": "Odświeżamy i modernizujemy pomieszczenia, dostosowując je do nowych potrzeb i standardów."
+    },
+    {
+      "title": "Usługi na zamówienie",
+      "description": "Realizujemy indywidualne zlecenia po wcześniejszym ustaleniu zakresu i warunków współpracy."
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Lokalna dostępność",
+      "description": "Działamy w regionie, dzięki czemu zapewniamy szybki kontakt i sprawną realizację zleceń."
+    },
+    {
+      "title": "Rzetelność",
+      "description": "Do każdego zadania podchodzimy uczciwie, korzystając ze sprawdzonych materiałów i rozwiązań."
+    },
+    {
+      "title": "Przejrzyste warunki",
+      "description": "Zakres prac i szacowane koszty ustalamy z góry, bez ukrytych niespodzianek."
+    }
+  ],
+  "contact": {
+    "heading": "Porozmawiajmy o Twoim zleceniu",
+    "cta": "Napisz lub zadzwoń — odpowiemy na pytania i zaproponujemy dogodny termin."
+  }
+}

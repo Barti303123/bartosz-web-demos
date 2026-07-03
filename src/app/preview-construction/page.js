@@ -2,9 +2,13 @@
 
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ChevronRight, Ruler, Home as HomeIcon, Box, MapPin } from 'lucide-react';
+import { ChevronRight, Ruler, Home as HomeIcon, Box } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import content from './content.json';
+
+// Ikony sekcji usług — dekoracyjne, cyklowane po indeksie (treść pochodzi z content.json).
+const SERVICE_ICONS = [HomeIcon, Ruler, Box];
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -42,9 +46,9 @@ export default function Home() {
 
         <div className="absolute right-0 top-0 w-full lg:w-[65%] h-[70vh] lg:h-screen z-0">
           <motion.div style={{ y }} className="absolute inset-0 w-full h-[120%] -top-[10%]">
-            <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop" 
-              alt="Architektura" 
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop"
+              alt="Realizacja"
               className="w-full h-full object-cover grayscale-[30%] opacity-40 lg:opacity-70"
             />
             {/* Linear overlay to blend with background */}
@@ -56,22 +60,20 @@ export default function Home() {
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
             <motion.div variants={fadeInUp} className="mb-6 flex items-center gap-4">
               <span className="w-12 h-[1px] bg-[#B38B59]"></span>
-              <span className="uppercase tracking-[0.2em] text-[#B38B59] text-xs font-semibold">Generalny Wykonawca</span>
+              <span className="uppercase tracking-[0.2em] text-[#B38B59] text-xs font-semibold">Testowa Branża · Warszawa</span>
             </motion.div>
-            
+
             <motion.h1 variants={fadeInUp} className="text-5xl lg:text-7xl font-light leading-[1.1] mb-8 text-white uppercase tracking-tight">
-              Precyzja, <br/>
-              <span className="font-bold">Która Zostaje</span> <br/>
-              Na Lata.
+              {content.hero.title}
             </motion.h1>
-            
+
             <motion.p variants={fadeInUp} className="text-lg text-gray-400 font-light mb-12 leading-relaxed max-w-lg border-l border-white/10 pl-6">
-              Od śmiałych wizji architektonicznych po perfekcyjne wykończenie wnętrz. Budujemy przestrzeń dla Ciebie i przyszłych pokoleń w Warszawa.
+              {content.hero.subtitle}
             </motion.p>
-            
+
             <motion.div variants={fadeInUp} className="flex gap-6">
               <a href="/preview-construction/kontakt" className="group flex items-center gap-4 bg-[#B38B59] text-white px-8 py-4 text-sm uppercase tracking-widest font-semibold hover:bg-[#a07c50] transition-colors">
-                <span>Inicjuj Projekt</span>
+                <span>{content.hero.cta}</span>
                 <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="/preview-construction/o-nas" className="group flex items-center gap-4 text-white px-8 py-4 text-sm uppercase tracking-widest font-semibold border border-white/20 hover:border-[#B38B59] hover:text-[#B38B59] transition-colors">
@@ -87,32 +89,31 @@ export default function Home() {
         <div className="container mx-auto px-8 md:px-20">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp} className="mb-20 flex flex-col md:flex-row md:items-end justify-between">
             <div className="max-w-xl">
-              <span className="uppercase tracking-[0.2em] text-white/30 text-xs font-semibold mb-4 block">01 // Nasze Kompetencje</span>
-              <h2 className="text-4xl md:text-5xl font-light text-white uppercase tracking-tight">Standardy <span className="text-[#B38B59] font-bold">Premium</span></h2>
+              <span className="uppercase tracking-[0.2em] text-white/30 text-xs font-semibold mb-4 block">01 // Zakres Usług</span>
+              <h2 className="text-4xl md:text-5xl font-light text-white uppercase tracking-tight">Co dla <span className="text-[#B38B59] font-bold">Ciebie zrobimy</span></h2>
             </div>
-            <p className="text-gray-400 font-light max-w-sm mt-6 md:mt-0">Każdy projekt traktujemy jak wizytówkę naszego rzemiosła. Nie uznajemy kompromisów w jakości.</p>
+            <p className="text-gray-400 font-light max-w-sm mt-6 md:mt-0">Każde zlecenie traktujemy jak wizytówkę naszego rzemiosła. Nie uznajemy kompromisów w jakości.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
-            {[
-              { num: "01", icon: HomeIcon, title: "Budowa Domów", desc: "Realizujemy obiekty mieszkaniowe w standardzie premium, dbając o każdy detal od fundamentów po dach." },
-              { num: "02", icon: Ruler, title: "Projekty i Adaptacje", desc: "Współpracujemy z najlepszymi architektami, dopasowując wizję do najwyższych norm budowlanych." },
-              { num: "03", icon: Box, title: "Wykończenia pod Klucz", desc: "Zarządzamy całym procesem aranżacji wnętrz, oferując przestrzenie gotowe do zamieszkania." }
-            ].map((service, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.15 }}
-                className="group p-10 md:p-14 border-b border-r border-white/10 last:border-r-0 hover:bg-[#111111] transition-colors relative"
-              >
-                <div className="text-[#B38B59]/20 font-bold text-6xl absolute top-6 right-8 group-hover:text-[#B38B59]/40 transition-colors">{service.num}</div>
-                <service.icon className="w-10 h-10 text-white mb-10 opacity-50 group-hover:opacity-100 group-hover:text-[#B38B59] transition-colors" strokeWidth={1} />
-                <h3 className="text-xl font-bold uppercase mb-4 text-white">{service.title}</h3>
-                <p className="text-gray-400 font-light leading-relaxed">{service.desc}</p>
-              </motion.div>
-            ))}
+            {content.services.map((service, idx) => {
+              const Icon = SERVICE_ICONS[idx % SERVICE_ICONS.length];
+              return (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: (idx % 3) * 0.15 }}
+                  className="group p-10 md:p-14 border-b border-r border-white/10 hover:bg-[#111111] transition-colors relative"
+                >
+                  <div className="text-[#B38B59]/20 font-bold text-6xl absolute top-6 right-8 group-hover:text-[#B38B59]/40 transition-colors">{String(idx + 1).padStart(2, '0')}</div>
+                  <Icon className="w-10 h-10 text-white mb-10 opacity-50 group-hover:opacity-100 group-hover:text-[#B38B59] transition-colors" strokeWidth={1} />
+                  <h3 className="text-xl font-bold uppercase mb-4 text-white">{service.title}</h3>
+                  <p className="text-gray-400 font-light leading-relaxed">{service.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -124,11 +125,11 @@ export default function Home() {
             <motion.div variants={fadeInUp}>
               <span className="w-[1px] h-20 bg-[#B38B59] mx-auto block mb-8"></span>
             </motion.div>
-            <motion.h2 variants={fadeInUp} className="text-3xl md:text-5xl font-light text-white leading-snug mb-10 uppercase tracking-tight">
-              "Architektura to zamrożona muzyka. My jesteśmy inżynierami, którzy sprawiają, że <span className="font-bold text-[#B38B59]">ona brzmi idealnie</span>."
+            <motion.h2 variants={fadeInUp} className="text-3xl md:text-4xl font-light text-white leading-snug mb-10 tracking-tight">
+              {content.about.body}
             </motion.h2>
             <motion.div variants={fadeInUp} className="flex flex-col items-center justify-center">
-              <p className="uppercase tracking-[0.2em] text-white/50 text-xs font-semibold mb-2">Zarząd</p>
+              <p className="uppercase tracking-[0.2em] text-white/50 text-xs font-semibold mb-2">Zespół</p>
               <p className="font-bold text-white tracking-widest uppercase text-sm">Podgląd Szablonu</p>
             </motion.div>
           </motion.div>
@@ -140,14 +141,14 @@ export default function Home() {
         <div className="absolute inset-0" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)`, backgroundSize: '40px 40px' }}></div>
         <div className="container mx-auto px-8 relative z-10 text-center">
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-4xl md:text-5xl font-bold uppercase tracking-tight mb-6 text-[#111111]">
-            Zbudujmy Twój Projekt
+            {content.contact.heading}
           </motion.h2>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-[#111111]/80 font-medium mb-10 max-w-xl mx-auto">
-            Nasze zespoły inżynieryjne w Warszawa są gotowe na analizę Twoich planów.
+            {content.contact.cta}
           </motion.p>
-          <motion.a 
+          <motion.a
             initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            href="/preview-construction/kontakt" 
+            href="/preview-construction/kontakt"
             className="inline-flex items-center gap-4 bg-[#111111] text-white px-10 py-5 text-sm uppercase tracking-widest font-semibold hover:bg-white hover:text-[#111111] transition-colors"
           >
             <span>Przejdź do formularza</span>

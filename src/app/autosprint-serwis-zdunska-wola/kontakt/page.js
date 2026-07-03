@@ -9,9 +9,9 @@ import content from '../content.json';
 
 /* ─── Dane kontaktowe ────────────────────────────────────────────────── */
 const CONTACT_ITEMS = [
-  { icon: Phone,  label: "Telefon",          value: "+48 123 456 789" },
-  { icon: Mail,   label: "E-mail",           value: "test@podglad.pl" },
-  { icon: MapPin, label: "Lokalizacja",      value: "ul. Deweloperska 1, Warszawa, Warszawa" },
+  { icon: Phone,  label: "Telefon",          value: "+48 555 222 333" },
+  { icon: Mail,   label: "E-mail",           value: "kontakt@autosprint-serwis.pl" },
+  { icon: MapPin, label: "Lokalizacja",      value: "ul. Łaska 44, Zduńska Wola" },
   { icon: Clock,  label: "Godziny Otwarcia", value: "Pon–Pt: 8:00–18:00  ·  Sob: 9:00–14:00" },
 ];
 
@@ -33,7 +33,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 overflow-hidden font-sans">
-      <Navbar slug="preview-auto" companyName="Podgląd Szablonu" dark={true} />
+      <Navbar slug="autosprint-serwis-zdunska-wola" companyName="AutoSprint Serwis" dark={true} />
 
       {/* Dekoracyjne orby tła */}
       <motion.div
@@ -125,7 +125,7 @@ export default function Contact() {
 
             {/* WhatsApp quick-link */}
             <a
-              href="https://wa.me/+48 123 456 789"
+              href="https://wa.me/+48 555 222 333"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-4 p-5 rounded-2xl bg-green-900/20 border border-green-800/40 hover:border-green-600/60 hover:bg-green-900/30 transition-all duration-300"
@@ -152,8 +152,8 @@ export default function Contact() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-zinc-900/90 backdrop-blur-md border border-zinc-700 rounded-xl px-5 py-3 text-center">
                   <MapPin className="w-5 h-5 text-red-500 mx-auto mb-1" />
-                  <p className="text-zinc-200 font-semibold text-sm">ul. Deweloperska 1, Warszawa</p>
-                  <p className="text-zinc-500 text-xs">Warszawa</p>
+                  <p className="text-zinc-200 font-semibold text-sm">ul. Łaska 44</p>
+                  <p className="text-zinc-500 text-xs">Zduńska Wola</p>
                 </div>
               </div>
             </div>
@@ -318,8 +318,8 @@ export default function Contact() {
                   {/* Alternatywa telefoniczna */}
                   <p className="text-center text-zinc-600 text-sm">
                     Wolisz zadzwonić?{" "}
-                    <a href="tel:+48 123 456 789" className="text-red-500 hover:text-red-400 font-semibold transition-colors">
-                      +48 123 456 789
+                    <a href="tel:+48 555 222 333" className="text-red-500 hover:text-red-400 font-semibold transition-colors">
+                      +48 555 222 333
                     </a>
                   </p>
                 </motion.form>
@@ -330,7 +330,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <Footer companyName="Podgląd Szablonu" />
+      <Footer companyName="AutoSprint Serwis" />
     </div>
   );
 }

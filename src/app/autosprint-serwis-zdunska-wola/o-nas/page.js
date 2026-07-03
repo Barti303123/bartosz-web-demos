@@ -25,7 +25,7 @@ const itemVariant = {
 export default function About() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 overflow-hidden font-sans">
-      <Navbar slug="preview-auto" companyName="Podgląd Szablonu" dark={true} />
+      <Navbar slug="autosprint-serwis-zdunska-wola" companyName="AutoSprint Serwis" dark={true} />
 
       {/* Dekoracyjne orby tła */}
       <div className="fixed top-1/4 right-[-10%] w-[50%] h-[50%] bg-red-600/10 rounded-full blur-[150px] pointer-events-none z-0" />
@@ -42,7 +42,7 @@ export default function About() {
               className="inline-flex items-center gap-2 mb-8 px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 backdrop-blur-md"
             >
               <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-              <span className="text-red-400 text-sm font-semibold tracking-wider uppercase">O Nas · Warszawa</span>
+              <span className="text-red-400 text-sm font-semibold tracking-wider uppercase">O Nas · Zduńska Wola</span>
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-white via-zinc-200 to-red-500">
@@ -57,7 +57,7 @@ export default function About() {
             />
 
             <p className="text-xl text-zinc-400 max-w-3xl leading-relaxed">
-              Poznaj nasz warsztat, ludzi i podejście do każdego zlecenia — Testowa Branża w Warszawa i okolicach.
+              Poznaj nasz warsztat, ludzi i podejście do każdego zlecenia — mechanik samochodowy w Zduńska Wola i okolicach.
             </p>
           </motion.div>
         </div>
@@ -88,7 +88,7 @@ export default function About() {
                 className="absolute -bottom-8 -right-8 bg-zinc-900 border border-zinc-800 px-6 py-5 rounded-xl shadow-2xl shadow-red-900/20 z-20 backdrop-blur-md"
               >
                 <div className="text-red-500 font-black uppercase tracking-wider text-sm mb-1">Lokalnie</div>
-                <div className="text-zinc-300 font-semibold">Warszawa i okolice</div>
+                <div className="text-zinc-300 font-semibold">Zduńska Wola i okolice</div>
               </motion.div>
             </motion.div>
 
@@ -185,25 +185,25 @@ export default function About() {
 
             <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0 relative z-10">
               <a
-                href="/preview-auto/kontakt"
+                href="/autosprint-serwis-zdunska-wola/kontakt"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all duration-300 shadow-lg shadow-red-900/30"
               >
                 {content.hero.cta}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="tel:+48 123 456 789"
+                href="tel:+48 555 222 333"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-zinc-800 hover:bg-zinc-700 text-white font-bold rounded-xl border border-zinc-700 hover:border-zinc-600 transition-all duration-300"
               >
                 <Phone className="w-5 h-5 text-red-500 flex-shrink-0" />
-                +48 123 456 789
+                +48 555 222 333
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <Footer companyName="Podgląd Szablonu" />
+      <Footer companyName="AutoSprint Serwis" />
     </div>
   );
 }
