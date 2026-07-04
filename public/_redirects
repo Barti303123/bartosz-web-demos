@@ -166,10 +166,6 @@
 /trattoria-roma-lodz/o-nas /trattoria-roma-lodz/o-nas/index.html 200
 /trattoria-roma-lodz/kontakt /trattoria-roma-lodz/kontakt/index.html 200
 
-/kancelaria-adwokacka-lex-sieradz /kancelaria-adwokacka-lex-sieradz/index.html 200
-/kancelaria-adwokacka-lex-sieradz/o-nas /kancelaria-adwokacka-lex-sieradz/o-nas/index.html 200
-/kancelaria-adwokacka-lex-sieradz/kontakt /kancelaria-adwokacka-lex-sieradz/kontakt/index.html 200
-
 /flora-sklep-kwiatowy-lodz /flora-sklep-kwiatowy-lodz/index.html 200
 /flora-sklep-kwiatowy-lodz/koszyk /flora-sklep-kwiatowy-lodz/koszyk/index.html 200
 /flora-sklep-kwiatowy-lodz/produkt/:product_slug /flora-sklep-kwiatowy-lodz/produkt/[slug]/index.html 200
