@@ -125,10 +125,6 @@
 /super-sklep-jacek-lodz/koszyk /super-sklep-jacek-lodz/koszyk/index.html 200
 /super-sklep-jacek-lodz/produkt/:product_slug /super-sklep-jacek-lodz/produkt/[slug]/index.html 200
 
-/kasia-prawnik-wroclaw /kasia-prawnik-wroclaw/index.html 200
-/kasia-prawnik-wroclaw/o-nas /kasia-prawnik-wroclaw/o-nas/index.html 200
-/kasia-prawnik-wroclaw/kontakt /kasia-prawnik-wroclaw/kontakt/index.html 200
-
 /janusz-pol-hydraulik-sieradz /janusz-pol-hydraulik-sieradz/index.html 200
 /janusz-pol-hydraulik-sieradz/o-nas /janusz-pol-hydraulik-sieradz/o-nas/index.html 200
 /janusz-pol-hydraulik-sieradz/kontakt /janusz-pol-hydraulik-sieradz/kontakt/index.html 200
