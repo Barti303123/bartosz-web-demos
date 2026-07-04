@@ -118,10 +118,6 @@
 /anna-salon-zgierz/o-nas /anna-salon-zgierz/o-nas/index.html 200
 /anna-salon-zgierz/kontakt /anna-salon-zgierz/kontakt/index.html 200
 
-/anna-salon-karkow /anna-salon-karkow/index.html 200
-/anna-salon-karkow/o-nas /anna-salon-karkow/o-nas/index.html 200
-/anna-salon-karkow/kontakt /anna-salon-karkow/kontakt/index.html 200
-
 /super-sklep-jacek-lodz/koszyk /super-sklep-jacek-lodz/koszyk/index.html 200
 /super-sklep-jacek-lodz/produkt/:product_slug /super-sklep-jacek-lodz/produkt/[slug]/index.html 200
 
