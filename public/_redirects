@@ -162,10 +162,6 @@
 /med-dent-klinika-sieradz/o-nas /med-dent-klinika-sieradz/o-nas/index.html 200
 /med-dent-klinika-sieradz/kontakt /med-dent-klinika-sieradz/kontakt/index.html 200
 
-/trattoria-roma-lodz /trattoria-roma-lodz/index.html 200
-/trattoria-roma-lodz/o-nas /trattoria-roma-lodz/o-nas/index.html 200
-/trattoria-roma-lodz/kontakt /trattoria-roma-lodz/kontakt/index.html 200
-
 /flora-sklep-kwiatowy-lodz /flora-sklep-kwiatowy-lodz/index.html 200
 /flora-sklep-kwiatowy-lodz/koszyk /flora-sklep-kwiatowy-lodz/koszyk/index.html 200
 /flora-sklep-kwiatowy-lodz/produkt/:product_slug /flora-sklep-kwiatowy-lodz/produkt/[slug]/index.html 200
