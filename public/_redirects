@@ -121,9 +121,5 @@
 /super-sklep-jacek-lodz/koszyk /super-sklep-jacek-lodz/koszyk/index.html 200
 /super-sklep-jacek-lodz/produkt/:product_slug /super-sklep-jacek-lodz/produkt/[slug]/index.html 200
 
-/janusz-pol-hydraulik-sieradz /janusz-pol-hydraulik-sieradz/index.html 200
-/janusz-pol-hydraulik-sieradz/o-nas /janusz-pol-hydraulik-sieradz/o-nas/index.html 200
-/janusz-pol-hydraulik-sieradz/kontakt /janusz-pol-hydraulik-sieradz/kontakt/index.html 200
-
 /flora-sklep-kwiatowy-lodz/koszyk /flora-sklep-kwiatowy-lodz/koszyk/index.html 200
 /flora-sklep-kwiatowy-lodz/produkt/:product_slug /flora-sklep-kwiatowy-lodz/produkt/[slug]/index.html 200
