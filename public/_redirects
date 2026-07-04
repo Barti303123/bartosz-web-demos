@@ -125,10 +125,6 @@
 /super-sklep-jacek-lodz/koszyk /super-sklep-jacek-lodz/koszyk/index.html 200
 /super-sklep-jacek-lodz/produkt/:product_slug /super-sklep-jacek-lodz/produkt/[slug]/index.html 200
 
-/salon-annna-lodz /salon-annna-lodz/index.html 200
-/salon-annna-lodz/o-nas /salon-annna-lodz/o-nas/index.html 200
-/salon-annna-lodz/kontakt /salon-annna-lodz/kontakt/index.html 200
-
 /kasia-prawnik-wroclaw /kasia-prawnik-wroclaw/index.html 200
 /kasia-prawnik-wroclaw/o-nas /kasia-prawnik-wroclaw/o-nas/index.html 200
 /kasia-prawnik-wroclaw/kontakt /kasia-prawnik-wroclaw/kontakt/index.html 200
