@@ -125,10 +125,6 @@
 /super-sklep-jacek-lodz/koszyk /super-sklep-jacek-lodz/koszyk/index.html 200
 /super-sklep-jacek-lodz/produkt/:product_slug /super-sklep-jacek-lodz/produkt/[slug]/index.html 200
 
-/trener-andrzej-lodz /trener-andrzej-lodz/index.html 200
-/trener-andrzej-lodz/o-nas /trener-andrzej-lodz/o-nas/index.html 200
-/trener-andrzej-lodz/kontakt /trener-andrzej-lodz/kontakt/index.html 200
-
 /super-trener-macin-karkow /super-trener-macin-karkow/index.html 200
 /super-trener-macin-karkow/o-nas /super-trener-macin-karkow/o-nas/index.html 200
 /super-trener-macin-karkow/kontakt /super-trener-macin-karkow/kontakt/index.html 200
