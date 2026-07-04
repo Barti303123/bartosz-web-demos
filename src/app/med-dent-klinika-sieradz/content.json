@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "cta": "Zarezerwuj wizytę",
+    "title": "Zdrowy i piękny uśmiech w Sieradzu – Med-Dent",
+    "subtitle": "Kompleksowa opieka stomatologiczna dla dzieci i dorosłych. Dbamy o Twój komfort i bezbolesne leczenie w przyjaznej atmosferze."
+  },
+  "meta": {
+    "title": "Med-Dent Sieradz - Twój Dobry Gabinet Stomatologiczny",
+    "description": "Profesjonalna opieka dentystyczna w Sieradzu. Dbamy o zdrowy i piękny uśmiech całej rodziny. Umów wizytę w klinice Med-Dent!"
+  },
+  "about": {
+    "body": "Od lat dbamy o zdrowie jamy ustnej mieszkańców Sieradza i okolicznych miejscowości. W naszej klinice łączymy nowoczesne metody leczenia z serdecznym, pełnym empatii podejściem do pacjenta. Oferujemy bezbolesne zabiegi w komfortowych warunkach, pomagając odzyskać pewność siebie i piękny uśmiech.",
+    "heading": "Poznaj Med-Dent – Twój dentysta w Sieradzu"
+  },
+  "why_us": [
+    {
+      "title": "Doświadczony zespół",
+      "description": "Nasi lekarze regularnie podnoszą kwalifikacje, aby oferować pacjentom najnowocześniejsze i najbezpieczniejsze metody leczenia."
+    },
+    {
+      "title": "Bezbolesne leczenie",
+      "description": "Stosujemy nowoczesne, skuteczne metody znieczulenia, dbając o pełen komfort i eliminując stres związany z wizytą."
+    },
+    {
+      "title": "Nowoczesny sprzęt diagnostyczny",
+      "description": "Dysponujemy precyzyjnym sprzętem RTG na miejscu, co pozwala na szybką i dokładną diagnozę bez konieczności odsyłania pacjenta."
+    },
+    {
+      "title": "Lokalne zaufanie",
+      "description": "Jesteśmy dumni, że od lat dbamy o uśmiechy rodzin z Sieradza i okolic, budując relacje oparte na zaufaniu i partnerstwie."
+    }
+  ],
+  "_schema": 1,
+  "contact": {
+    "cta": "Zadzwoń do nas lub odwiedź naszą klinikę w Sieradzu. Chętnie odpowiemy na wszystkie pytania i dobierzemy dogodny termin wizyty.",
+    "heading": "Skontaktuj się z nami i zadbaj o swój uśmiech"
+  },
+  "services": [
+    {
+      "title": "Stomatologia zachowawcza",
+      "description": "Skuteczne leczenie próchnicy, estetyczna odbudowa zębów oraz profilaktyka dostosowana do potrzeb pacjentów w każdym wieku.",
+      "image_query": "dental filling teeth checkup"
+    },
+    {
+      "title": "Chirurgia i implantologia",
+      "description": "Bezpieczne usuwanie zębów oraz nowoczesne uzupełnianie braków zębowych za pomocą trwałych i estetycznych implantów.",
+      "image_query": "dental implant tooth model"
+    },
+    {
+      "title": "Stomatologia dziecięca",
+      "description": "Bezstresowe wizyty adaptacyjne oraz delikatne leczenie najmłodszych pacjentów w przyjaznej, pełnej zrozumienia atmosferze.",
+      "image_query": "child dentist happy kid"
+    },
+    {
+      "title": "Protetyka estetyczna",
+      "description": "Odbudowa pięknego uśmiechu dzięki nowoczesnym koronom, mostom oraz dopasowanym protezom najwyższej jakości.",
+      "image_query": "dental crown veneer smile"
+    }
+  ]
+}

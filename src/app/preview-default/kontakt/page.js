@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send, ArrowRight, MessageSquare } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import content from "../content.json";
 
 export default function DefaultContact() {
   const [submitted, setSubmitted] = useState(false);
@@ -33,10 +34,10 @@ export default function DefaultContact() {
               <MessageSquare size={32} />
             </div>
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
-              Bądźmy w <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-fuchsia-400">Kontakcie</span>
+              {content.contact.heading}
             </h1>
             <p className="text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
-              Masz wizję, którą chcesz zrealizować? Nasz zespół ekspertów z Warszawa czeka, by przekuć Twoje pomysły w działający produkt.
+              {content.contact.cta}
             </p>
           </motion.div>
         </div>

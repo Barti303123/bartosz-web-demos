@@ -1,0 +1,48 @@
+{
+  "_schema": 1,
+  "meta": {
+    "title": "Siłownia i trening — osiągnij formę",
+    "description": "Treningi, zajęcia i wsparcie, które pomogą Ci osiągnąć cel. Dołącz i zacznij już dziś w przyjaznej atmosferze."
+  },
+  "hero": {
+    "title": "Osiągnij formę, o jakiej marzysz",
+    "subtitle": "Nowoczesny sprzęt, energia i wsparcie, dzięki którym zrobisz krok w stronę lepszej kondycji — niezależnie od poziomu.",
+    "cta": "Dołącz do nas"
+  },
+  "about": {
+    "heading": "Miejsce, w którym robisz postępy",
+    "body": "Jesteśmy lokalnym miejscem do treningu, w którym liczy się Twój cel i dobra atmosfera. Stawiamy na profesjonalne wsparcie, motywację i przyjazne podejście do każdego, kto chce zadbać o formę."
+  },
+  "services": [
+    {
+      "title": "Trening siłowy",
+      "description": "Strefa wolnych ciężarów i maszyn oraz wsparcie w budowaniu siły i sylwetki."
+    },
+    {
+      "title": "Zajęcia grupowe",
+      "description": "Energetyczne treningi w grupie, które dają motywację i świetne efekty."
+    },
+    {
+      "title": "Trening personalny",
+      "description": "Indywidualny plan i opieka trenera dopasowane do Twoich celów i możliwości."
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Wsparcie i motywacja",
+      "description": "Pomagamy utrzymać regularność i cieszyć się postępami krok po kroku."
+    },
+    {
+      "title": "Przyjazna atmosfera",
+      "description": "U nas każdy czuje się dobrze — bez oceniania, za to z energią do działania."
+    },
+    {
+      "title": "Dogodne godziny",
+      "description": "Elastyczne godziny otwarcia, które łatwo dopasujesz do swojego dnia."
+    }
+  ],
+  "contact": {
+    "heading": "Zacznij już dziś",
+    "cta": "Zostaw kontakt lub zadzwoń — pomożemy dobrać najlepszy plan i zaprosimy na trening."
+  }
+}

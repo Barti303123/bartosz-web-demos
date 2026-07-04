@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import content from "../content.json";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -43,10 +44,10 @@ export default function Contact() {
               <span className="text-xs tracking-[0.3em] text-[#C5A059] uppercase font-semibold">Poufność i Bezpieczeństwo</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-serif text-white tracking-tight leading-tight mb-8">
-              Skontaktuj się <br/>z nami.
+              {content.contact.heading}
             </h1>
             <p className="text-gray-400 font-light text-lg leading-relaxed">
-              Każda wielka sprawa zaczyna się od jednej rozmowy. Jesteśmy gotowi podjąć najtrudniejsze wyzwania prawne w obronie Twoich interesów.
+              {content.contact.cta}
             </p>
           </motion.div>
 
@@ -114,9 +115,9 @@ export default function Contact() {
                   defaultValue=""
                 >
                   <option value="" disabled className="text-gray-500">Wybierz obszar praktyki</option>
-                  <option value="ma">Fuzje i Przejęcia (M&A)</option>
-                  <option value="corporate">Spór Korporacyjny</option>
-                  <option value="realestate">Nieruchomości</option>
+                  {content.services.map((service, idx) => (
+                    <option key={idx} value={service.title}>{service.title}</option>
+                  ))}
                   <option value="other">Inna Sprawa</option>
                 </select>
               </div>

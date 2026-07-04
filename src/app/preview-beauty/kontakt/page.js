@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import content from '../content.json';
 
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', phone: '', service: '' });
@@ -34,7 +35,7 @@ export default function Contact() {
             <span className="w-8 h-[1px] bg-[#C1A88B]"></span>
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-5xl md:text-7xl font-serif mb-6 leading-tight text-[#3A332C]">
-            Zarezerwuj <span className="italic font-light text-[#C1A88B]">Czas</span> <br/>Dla Siebie.
+            {content.contact.heading}
           </motion.h1>
         </div>
       </section>
@@ -84,7 +85,7 @@ export default function Contact() {
           {/* Right: Minimalist Form */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }} className="bg-white p-10 lg:p-16 rounded-[2.5rem] shadow-2xl shadow-black/5">
             <h2 className="text-3xl font-serif mb-2 text-[#3A332C]">Napisz do nas</h2>
-            <p className="text-gray-500 font-light mb-12">Nasz concierge oddzwoni do Ciebie w ciągu 15 minut, aby dopasować idealny termin wizyty.</p>
+            <p className="text-gray-500 font-light mb-12">{content.contact.cta}</p>
             
             <form onSubmit={handleSubmit} className="space-y-8">
               <div className="relative group">
@@ -116,9 +117,9 @@ export default function Contact() {
                   defaultValue=""
                 >
                   <option value="" disabled className="text-gray-400">Jakim zabiegiem jesteś zainteresowana?</option>
-                  <option value="face">Kosmetologia na Twarz</option>
-                  <option value="body">Rytuały Ciała & Masaże</option>
-                  <option value="med">Medycyna Estetyczna</option>
+                  {content.services.map((service, idx) => (
+                    <option key={idx} value={service.title}>{service.title}</option>
+                  ))}
                   <option value="other">Inne / Konsultacja</option>
                 </select>
               </div>

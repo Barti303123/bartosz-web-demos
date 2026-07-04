@@ -1,0 +1,48 @@
+{
+  "_schema": 1,
+  "meta": {
+    "title": "Profesjonalna opieka medyczna",
+    "description": "Nowoczesna, przyjazna opieka medyczna blisko Ciebie. Umów wizytę i zadbaj o swoje zdrowie z zaufanymi specjalistami."
+  },
+  "hero": {
+    "title": "Zadbaj o zdrowie w zaufanych rękach",
+    "subtitle": "Nowoczesna, przyjazna opieka medyczna dla pacjentów z regionu. Stawiamy na profesjonalizm, komfort i indywidualne podejście.",
+    "cta": "Umów wizytę"
+  },
+  "about": {
+    "heading": "Twoje zdrowie to nasz priorytet",
+    "body": "Jesteśmy lokalną placówką, w której pacjent jest najważniejszy. Łączymy fachową wiedzę z empatią i nowoczesnym podejściem, dbając o Twój komfort na każdym etapie leczenia."
+  },
+  "services": [
+    {
+      "title": "Konsultacje specjalistyczne",
+      "description": "Profesjonalna diagnoza i porada dopasowana do Twoich potrzeb zdrowotnych."
+    },
+    {
+      "title": "Diagnostyka",
+      "description": "Dokładne badania i nowoczesna diagnostyka, które pozwalają trafnie zaplanować leczenie."
+    },
+    {
+      "title": "Profilaktyka i leczenie",
+      "description": "Kompleksowa opieka — od profilaktyki po skuteczne leczenie i kontrolę."
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Doświadczeni specjaliści",
+      "description": "Nasz zespół to fachowcy, którzy podchodzą do każdego pacjenta z uwagą i zaangażowaniem."
+    },
+    {
+      "title": "Komfort i dyskrecja",
+      "description": "Zapewniamy przyjazną atmosferę, krótkie terminy i pełną dyskrecję."
+    },
+    {
+      "title": "Nowoczesne podejście",
+      "description": "Korzystamy ze sprawdzonych metod i nowoczesnego sprzętu dla Twojego bezpieczeństwa."
+    }
+  ],
+  "contact": {
+    "heading": "Umów wizytę już dziś",
+    "cta": "Skontaktuj się z nami, aby umówić wizytę lub uzyskać informacje — chętnie pomożemy."
+  }
+}

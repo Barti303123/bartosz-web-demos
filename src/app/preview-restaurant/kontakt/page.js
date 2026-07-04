@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import content from '../content.json';
 
 export default function Contact() {
   const headerRef = useRef(null);
@@ -36,7 +37,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-serif text-white mb-6">Rezerwacje & <span className="text-amber-500 italic">Kontakt</span></h1>
+            <h1 className="text-5xl md:text-7xl font-serif text-white mb-6">{content.contact.heading}</h1>
             <div className="w-24 h-1 bg-amber-600 mx-auto" />
           </motion.div>
         </div>
@@ -62,7 +63,7 @@ export default function Contact() {
               <div>
                 <h2 className="text-3xl font-serif text-white mb-6">Nawiąż z Nami Kontakt</h2>
                 <p className="text-stone-400 font-light text-lg mb-8">
-                  Z ogromną przyjemnością powitamy Państwa w Podgląd Szablonu. W sprawie organizacji wydarzeń prywatnych lub realizacji wyjątkowych życzeń, uprzejmie prosimy o bezpośredni kontakt.
+                  {content.contact.cta}
                 </p>
               </div>
 

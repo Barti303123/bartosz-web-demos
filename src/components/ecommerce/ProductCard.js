@@ -1,6 +1,7 @@
 "use client";
 
 import { useCart } from '@/store/useCart';
+import { priceLabel } from '@/lib/shopProducts';
 import { ShoppingCart } from 'lucide-react';
 
 export default function ProductCard({ product }) {
@@ -22,7 +23,7 @@ export default function ProductCard({ product }) {
             <div className="p-5 flex flex-col flex-1">
                 <div className="flex justify-between items-start gap-2 mb-2">
                     <h3 className="font-bold text-gray-900 line-clamp-2">{product.name}</h3>
-                    <span className="font-bold text-blue-600 whitespace-nowrap">{product.price.toFixed(2)} zł</span>
+                    <span className="font-bold text-blue-600 whitespace-nowrap">{priceLabel(product.price)}</span>
                 </div>
                 <p className="text-sm text-gray-500 mb-4 line-clamp-2 flex-1">{product.description}</p>
                 <button 

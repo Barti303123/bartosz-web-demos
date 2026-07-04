@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import content from '../content.json';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -29,11 +30,11 @@ export default function Contact() {
         {/* Left: Aggressive Form */}
         <div className="w-full lg:w-1/2 flex flex-col pt-10 px-8 lg:px-20 z-10 bg-[#050505]">
           <motion.div initial="hidden" animate="visible" variants={fadeIn} className="max-w-xl w-full mb-12">
-            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 leading-none">
-              Zacznij <br/><span className="text-[#FF2A2A]">Teraz.</span>
+            <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-6 leading-none">
+              {content.contact.heading}
             </h1>
             <p className="text-xl text-gray-400 font-medium">
-              Zostaw dane. Nasz zespół skontaktuje się z Tobą w ciągu 24h, by ustalić Twój plan ataku.
+              {content.contact.cta}
             </p>
           </motion.div>
 
@@ -64,10 +65,11 @@ export default function Contact() {
                 className="w-full bg-[#111111] border-2 border-transparent focus:border-[#FF2A2A] text-white px-6 py-5 text-lg font-bold uppercase tracking-wider outline-none transition-colors appearance-none cursor-pointer"
                 defaultValue=""
               >
-                <option value="" disabled className="text-gray-600">WYBIERZ CEL TRENINGOWY</option>
-                <option value="strength">BUDOWA MASY MIĘŚNIOWEJ (SIŁA)</option>
-                <option value="fatloss">REDUKCJA TKANKI TŁUSZCZOWEJ</option>
-                <option value="performance">POPRAWA WYDOLNOŚCI (CROSSFIT)</option>
+                <option value="" disabled className="text-gray-600">WYBIERZ USŁUGĘ</option>
+                {content.services.map((service, idx) => (
+                  <option key={idx} value={service.title}>{service.title.toUpperCase()}</option>
+                ))}
+                <option value="other">INNE / KONSULTACJA</option>
               </select>
             </div>
 

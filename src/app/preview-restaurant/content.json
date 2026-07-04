@@ -1,0 +1,48 @@
+{
+  "_schema": 1,
+  "meta": {
+    "title": "Restauracja — dobre jedzenie blisko Ciebie",
+    "description": "Świeże, smaczne dania w miłej atmosferze. Zarezerwuj stolik i poczuj smak, który zapamiętasz."
+  },
+  "hero": {
+    "title": "Smak, który zapamiętasz",
+    "subtitle": "Świeże składniki, sprawdzone przepisy i przyjazna atmosfera. Zapraszamy na wyjątkowe chwile przy stole.",
+    "cta": "Zarezerwuj stolik"
+  },
+  "about": {
+    "heading": "Miejsce z dobrą kuchnią i atmosferą",
+    "body": "Jesteśmy lokalną restauracją, w której liczy się smak, świeżość i gościnność. Gotujemy z pasją i dbamy o to, by każda wizyta była przyjemnością — na co dzień i od święta."
+  },
+  "services": [
+    {
+      "title": "Kuchnia z pasją",
+      "description": "Dania przygotowywane na świeżo, z dbałością o smak i jakość każdego składnika."
+    },
+    {
+      "title": "Menu sezonowe",
+      "description": "Regularnie odświeżana oferta oparta na sezonowych, lokalnych produktach."
+    },
+    {
+      "title": "Organizacja przyjęć",
+      "description": "Przygotujemy Twoje spotkanie, imprezę okolicznościową lub katering na wynos."
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Świeże składniki",
+      "description": "Stawiamy na jakość i świeżość — to podstawa dobrego smaku."
+    },
+    {
+      "title": "Miła atmosfera",
+      "description": "Przytulne wnętrze i życzliwa obsługa, dzięki którym chce się wracać."
+    },
+    {
+      "title": "Dogodna lokalizacja",
+      "description": "Jesteśmy blisko Ciebie — łatwo do nas trafić i zarezerwować stolik."
+    }
+  ],
+  "contact": {
+    "heading": "Zarezerwuj stolik",
+    "cta": "Napisz lub zadzwoń, aby zarezerwować stolik lub zapytać o ofertę — czekamy na Ciebie."
+  }
+}

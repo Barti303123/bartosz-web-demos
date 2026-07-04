@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, ShieldPlus } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import content from '../content.json';
 
 export default function Contact() {
   return (
@@ -25,10 +26,10 @@ export default function Contact() {
           >
             <ShieldPlus className="w-16 h-16 text-cyan-500 mx-auto mb-6" />
             <h1 className="text-5xl font-bold mb-6 text-slate-900">
-              Nawiąż <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-600">Kontakt</span>
+              {content.contact.heading}
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Jesteśmy tutaj, aby wspierać Państwa w trosce o zdrowie. Skontaktuj się z Podgląd Szablonu w celu umówienia wizyty, uzyskania informacji lub w nagłych przypadkach.
+              {content.contact.cta}
             </p>
           </motion.div>
         </div>

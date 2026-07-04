@@ -1,0 +1,56 @@
+{
+  "_schema": 1,
+  "meta": {
+    "title": "Sklep — sprawdzone produkty blisko Ciebie",
+    "description": "Odkryj naszą ofertę produktów. Dobra jakość, lokalna obsługa i pomoc w wyborze. Zapytaj o dostępność i wycenę."
+  },
+  "hero": {
+    "title": "Produkty, które pokochasz",
+    "subtitle": "Starannie dobrana oferta i pomoc w wyborze. Przeglądaj, dodawaj do koszyka i wyślij zapytanie — zajmiemy się resztą.",
+    "cta": "Zobacz ofertę"
+  },
+  "about": {
+    "heading": "Lokalny sklep, na którym możesz polegać",
+    "body": "Jesteśmy lokalnym sprzedawcą, który stawia na jakość, uczciwe podejście i pomoc w wyborze. Chętnie doradzimy i przygotujemy ofertę dopasowaną do Twoich potrzeb."
+  },
+  "services": [
+    {
+      "title": "Produkt z naszej oferty",
+      "description": "Sprawdzona jakość i staranny dobór — idealny wybór na co dzień i na prezent.",
+      "image_query": "product shop"
+    },
+    {
+      "title": "Zestaw na prezent",
+      "description": "Gotowy zestaw, który sprawdzi się jako trafiony upominek dla bliskich.",
+      "image_query": "gift box"
+    },
+    {
+      "title": "Bestseller",
+      "description": "Jeden z najczęściej wybieranych produktów przez naszych klientów.",
+      "image_query": "popular product"
+    },
+    {
+      "title": "Nowość w ofercie",
+      "description": "Świeżo dodana pozycja — sprawdź, zanim zniknie z półki.",
+      "image_query": "new product"
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Lokalna obsługa",
+      "description": "Jesteśmy blisko — chętnie doradzimy i pomożemy w wyborze."
+    },
+    {
+      "title": "Sprawdzona jakość",
+      "description": "Oferujemy produkty, za którymi stoimy i które sami polecamy."
+    },
+    {
+      "title": "Wygodny kontakt",
+      "description": "Dodaj do koszyka i wyślij zapytanie — resztą zajmiemy się my."
+    }
+  ],
+  "contact": {
+    "heading": "Masz pytanie o produkt?",
+    "cta": "Napisz lub zadzwoń — pomożemy wybrać i przygotujemy wycenę."
+  }
+}

@@ -171,3 +171,31 @@
 /autosprint-serwis-zdunska-wola /autosprint-serwis-zdunska-wola/index.html 200
 /autosprint-serwis-zdunska-wola/o-nas /autosprint-serwis-zdunska-wola/o-nas/index.html 200
 /autosprint-serwis-zdunska-wola/kontakt /autosprint-serwis-zdunska-wola/kontakt/index.html 200
+
+/med-dent-klinika-sieradz /med-dent-klinika-sieradz/index.html 200
+/med-dent-klinika-sieradz/o-nas /med-dent-klinika-sieradz/o-nas/index.html 200
+/med-dent-klinika-sieradz/kontakt /med-dent-klinika-sieradz/kontakt/index.html 200
+
+/trattoria-roma-lodz /trattoria-roma-lodz/index.html 200
+/trattoria-roma-lodz/o-nas /trattoria-roma-lodz/o-nas/index.html 200
+/trattoria-roma-lodz/kontakt /trattoria-roma-lodz/kontakt/index.html 200
+
+/kancelaria-adwokacka-lex-sieradz /kancelaria-adwokacka-lex-sieradz/index.html 200
+/kancelaria-adwokacka-lex-sieradz/o-nas /kancelaria-adwokacka-lex-sieradz/o-nas/index.html 200
+/kancelaria-adwokacka-lex-sieradz/kontakt /kancelaria-adwokacka-lex-sieradz/kontakt/index.html 200
+
+/powergym-klub-lodz /powergym-klub-lodz/index.html 200
+/powergym-klub-lodz/o-nas /powergym-klub-lodz/o-nas/index.html 200
+/powergym-klub-lodz/kontakt /powergym-klub-lodz/kontakt/index.html 200
+
+/flora-sklep-kwiatowy-lodz /flora-sklep-kwiatowy-lodz/index.html 200
+/flora-sklep-kwiatowy-lodz/koszyk /flora-sklep-kwiatowy-lodz/koszyk/index.html 200
+/flora-sklep-kwiatowy-lodz/produkt/:product_slug /flora-sklep-kwiatowy-lodz/produkt/[slug]/index.html 200
+
+/studio-belle-kosmetyka-lodz /studio-belle-kosmetyka-lodz/index.html 200
+/studio-belle-kosmetyka-lodz/o-nas /studio-belle-kosmetyka-lodz/o-nas/index.html 200
+/studio-belle-kosmetyka-lodz/kontakt /studio-belle-kosmetyka-lodz/kontakt/index.html 200
+
+/foto-studio-klik-pabianice /foto-studio-klik-pabianice/index.html 200
+/foto-studio-klik-pabianice/o-nas /foto-studio-klik-pabianice/o-nas/index.html 200
+/foto-studio-klik-pabianice/kontakt /foto-studio-klik-pabianice/kontakt/index.html 200

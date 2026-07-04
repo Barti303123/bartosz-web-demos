@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "cta": "Zarezerwuj termin sesji",
+    "title": "Twoje najpiękniejsze wspomnienia zatrzymane w kadrze",
+    "subtitle": "Profesjonalne sesje fotograficzne i zdjęcia dokumentowe w Pabianicach. Tworzymy naturalne ujęcia pełne prawdziwych emocji."
+  },
+  "meta": {
+    "title": "Foto Studio Klik | Profesjonalny Fotograf Pabianice",
+    "description": "Szukasz fotografa w Pabianicach? Foto Studio Klik oferuje wyjątkowe sesje rodzinne, ślubne oraz profesjonalne zdjęcia dokumentowe. Sprawdź ofertę!"
+  },
+  "about": {
+    "body": "Jesteśmy lokalnym studiem fotograficznym, które z pasją uwiecznia najważniejsze momenty Waszego życia. Specjalizujemy się w naturalnej fotografii rodzinnej, dziecięcej, ślubnej oraz profesjonalnych zdjęciach do dokumentów. Dbamy o swobodną atmosferę podczas każdej sesji, abyście przed obiektywem czuli się w pełni komfortowo.",
+    "heading": "Poznaj Foto Studio Klik z Pabianic"
+  },
+  "why_us": [
+    {
+      "title": "Przyjazna i luźna atmosfera",
+      "description": "Wiemy, że pozowanie bywa stresujące. Dbamy o swobodny klimat, dzięki czemu zdjęcia wychodzą naturalnie i bez sztucznego pozowania."
+    },
+    {
+      "title": "Lokalne studio w Pabianicach",
+      "description": "Działamy na miejscu, doskonale znamy najpiękniejsze zakątki Pabianic i okolic na sesje plenerowe, a nasze studio jest łatwo dostępne."
+    },
+    {
+      "title": "Szybki czas realizacji",
+      "description": "Szanujemy Twój czas. Gotowe, profesjonalnie obrobione zdjęcia otrzymasz w ustalonym terminie, a zdjęcia dokumentowe robimy od ręki."
+    }
+  ],
+  "_schema": 1,
+  "contact": {
+    "cta": "Masz pytania lub chcesz zarezerwować termin? Skontaktuj się z nami telefonicznie, mailowo lub odwiedź nasze studio w Pabianicach.",
+    "heading": "Stwórzmy razem coś pięknego"
+  },
+  "services": [
+    {
+      "title": "Sesje rodzinne i dziecięce",
+      "description": "Ciepłe, naturalne kadry w przyjaznej atmosferze. Realizujemy sesje w naszym studio w Pabianicach lub w plenerze na terenie powiatu.",
+      "image_query": "happy family photoshoot"
+    },
+    {
+      "title": "Fotografia ślubna i okolicznościowa",
+      "description": "Reportaże pełne emocji z ślubów, chrzcin czy komunii. Zatrzymujemy w kadrze ulotne chwile, do których będziecie chętnie wracać latami.",
+      "image_query": "wedding couple portrait"
+    },
+    {
+      "title": "Zdjęcia do dokumentów",
+      "description": "Ekspresowe i profesjonalne zdjęcia do dowodu osobistego, paszportu, prawa jazdy czy legitymacji szkolnej, zgodne ze wszystkimi wymogami.",
+      "image_query": "passport photo portrait"
+    },
+    {
+      "title": "Sesje biznesowe i wizerunkowe",
+      "description": "Profesjonalne portrety dla przedsiębiorców i pracowników. Idealne rozwiązanie do CV, na profil LinkedIn oraz na strony internetowe.",
+      "image_query": "business portrait professional"
+    }
+  ]
+}

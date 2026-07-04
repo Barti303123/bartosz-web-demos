@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import NavbarEcommerce from '@/components/ecommerce/NavbarEcommerce';
 import Footer from '@/components/Footer';
 import { useCart } from '@/store/useCart';
+import { priceLabel } from '@/lib/shopProducts';
 import { Trash2, ArrowRight, ShoppingBag, Plus, Minus } from 'lucide-react';
 import Link from 'next/link';
 
@@ -55,7 +56,7 @@ export default function Cart() {
                     
                     <div className="flex-grow text-center sm:text-left">
                       <h3 className="font-bold text-gray-900 text-lg">{item.name}</h3>
-                      <p className="text-blue-600 font-bold mt-1">{item.price.toFixed(2)} zł</p>
+                      <p className="text-blue-600 font-bold mt-1">{priceLabel(item.price)}</p>
                     </div>
 
                     <div className="flex items-center gap-4">
@@ -90,31 +91,30 @@ export default function Cart() {
               {/* Podsumowanie */}
               <div className="w-full lg:w-96 flex-shrink-0">
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 sticky top-24">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4 pb-4 border-b border-gray-100">Podsumowanie zamówienia</h3>
-                  
+                  <h3 className="text-lg font-bold text-gray-900 mb-4 pb-4 border-b border-gray-100">Podsumowanie</h3>
+
                   <div className="space-y-3 mb-6">
                     <div className="flex justify-between text-gray-600">
-                      <span>Wartość produktów</span>
-                      <span>{getCartTotal().toFixed(2)} zł</span>
+                      <span>Produkty w koszyku</span>
+                      <span className="font-medium text-gray-900">{items.reduce((n, it) => n + it.quantity, 0)} szt.</span>
                     </div>
                     <div className="flex justify-between text-gray-600">
-                      <span>Dostawa</span>
-                      <span className="text-green-600 font-medium">Darmowa</span>
+                      <span>Wycena</span>
+                      <span className="text-blue-600 font-semibold">Indywidualna</span>
                     </div>
                   </div>
-                  
-                  <div className="flex justify-between items-center py-4 border-t border-gray-100 mb-6">
-                    <span className="font-bold text-gray-900 text-lg">Do zapłaty</span>
-                    <span className="font-extrabold text-blue-600 text-2xl">{getCartTotal().toFixed(2)} zł</span>
+
+                  <div className="rounded-xl bg-blue-50 p-4 mb-6 text-sm text-blue-800 leading-relaxed">
+                    Wyślij zapytanie, a przygotujemy wycenę i szczegóły realizacji dla wybranych produktów.
                   </div>
 
-                  <button className="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white py-4 rounded-xl font-bold text-lg transition-colors">
-                    Przejdź do kasy
+                  <a href="tel:+48 123 456 789" className="w-full flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800 text-white py-4 rounded-xl font-bold text-lg transition-colors">
+                    Wyślij zapytanie o zamówienie
                     <ArrowRight className="w-5 h-5" />
-                  </button>
-                  
+                  </a>
+
                   <p className="text-xs text-gray-400 text-center mt-4">
-                    Płatności są bezpiecznie przetwarzane przez Stripe.
+                    Skontaktujemy się w sprawie wyceny i realizacji.
                   </p>
                 </div>
               </div>

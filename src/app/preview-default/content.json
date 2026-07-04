@@ -1,0 +1,48 @@
+{
+  "_schema": 1,
+  "meta": {
+    "title": "Profesjonalne usługi lokalne",
+    "description": "Rzetelne usługi dopasowane do Twoich potrzeb. Lokalnie, terminowo i z dbałością o jakość. Skontaktuj się z nami już dziś."
+  },
+  "hero": {
+    "title": "Profesjonalne usługi, na których możesz polegać",
+    "subtitle": "Realizujemy zlecenia rzetelnie, terminowo i z dbałością o szczegóły. Postaw na sprawdzonego, lokalnego partnera.",
+    "cta": "Skontaktuj się"
+  },
+  "about": {
+    "heading": "Poznaj naszą firmę",
+    "body": "Jesteśmy lokalną firmą, która stawia na jakość, uczciwość i indywidualne podejście do każdego klienta. Nasze doświadczenie i zaangażowanie sprawiają, że klienci wracają do nas i polecają nas dalej."
+  },
+  "services": [
+    {
+      "title": "Nasza główna usługa",
+      "description": "Kompleksowo realizujemy zlecenia w naszej specjalności, dbając o najwyższą jakość wykonania."
+    },
+    {
+      "title": "Doradztwo i konsultacje",
+      "description": "Pomożemy dobrać najlepsze rozwiązanie dopasowane do Twoich potrzeb i budżetu."
+    },
+    {
+      "title": "Obsługa na zamówienie",
+      "description": "Podejmujemy się indywidualnych zleceń po wcześniejszym ustaleniu zakresu i warunków."
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Doświadczenie",
+      "description": "Wiemy, jak zrobić to dobrze — łączymy praktykę z rzetelnym podejściem do każdego zadania."
+    },
+    {
+      "title": "Uczciwe warunki",
+      "description": "Zakres prac i koszty ustalamy jasno z góry, bez ukrytych opłat."
+    },
+    {
+      "title": "Lokalnie i solidnie",
+      "description": "Działamy w Twojej okolicy, zapewniając szybki kontakt i sprawną realizację."
+    }
+  ],
+  "contact": {
+    "heading": "Porozmawiajmy o Twoich potrzebach",
+    "cta": "Napisz lub zadzwoń — odpowiemy na pytania i zaproponujemy najlepsze rozwiązanie."
+  }
+}
