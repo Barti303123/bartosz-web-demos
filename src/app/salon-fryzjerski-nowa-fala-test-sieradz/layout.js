@@ -1,9 +1,9 @@
 export const metadata = {
-  title: { absolute: "Salon urody i pielęgnacji" },
-  description: "Profesjonalne zabiegi kosmetyczne i pielęgnacyjne w przyjaznej atmosferze. Zadbaj o siebie — umów wizytę już dziś.",
+  title: { absolute: "Nowa Fala — fryzjer w Sieradzu" },
+  description: "Strzyżenie, koloryzacja i pielęgnacja włosów w Sieradzu. Umów się telefonicznie, przyjmujemy od wtorku do soboty.",
   openGraph: {
-    title: "Salon urody i pielęgnacji",
-    description: "Profesjonalne zabiegi kosmetyczne i pielęgnacyjne w przyjaznej atmosferze. Zadbaj o siebie — umów wizytę już dziś.",
+    title: "Nowa Fala — fryzjer w Sieradzu",
+    description: "Strzyżenie, koloryzacja i pielęgnacja włosów w Sieradzu. Umów się telefonicznie, przyjmujemy od wtorku do soboty.",
     type: "website"
   }
 };

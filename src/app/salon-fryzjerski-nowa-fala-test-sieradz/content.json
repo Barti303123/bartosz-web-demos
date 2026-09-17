@@ -1,48 +1,52 @@
 {
-  "_schema": 1,
-  "meta": {
-    "title": "Salon urody i pielęgnacji",
-    "description": "Profesjonalne zabiegi kosmetyczne i pielęgnacyjne w przyjaznej atmosferze. Zadbaj o siebie — umów wizytę już dziś."
-  },
   "hero": {
-    "title": "Zadbaj o siebie w dobrych rękach",
-    "subtitle": "Profesjonalne zabiegi pielęgnacyjne i kosmetyczne w kameralnej, przyjaznej atmosferze. Efekty, które widać i czuć.",
-    "cta": "Umów wizytę"
+    "cta": "Umów wizytę",
+    "title": "Fryzjer w Sieradzu, do którego wraca się po latach",
+    "subtitle": "Strzyżenie, koloryzacja i pielęgnacja. Bez pośpiechu, z rozmową o tym, co ma wyjść."
+  },
+  "meta": {
+    "title": "Nowa Fala — fryzjer w Sieradzu",
+    "description": "Strzyżenie, koloryzacja i pielęgnacja włosów w Sieradzu. Umów się telefonicznie, przyjmujemy od wtorku do soboty."
   },
   "about": {
-    "heading": "Miejsce, w którym czujesz się zadbana",
-    "body": "Jesteśmy lokalnym salonem, który łączy fachowość z ciepłym, indywidualnym podejściem do każdej klientki. Dbamy o komfort, higienę i naturalny efekt — tak, byś wyszła od nas zrelaksowana i zadowolona."
+    "body": "Nowa Fala to mały salon w centrum Sieradza. Pracuję sama, więc każda wizyta ma swój czas i nikt nie strzyże w biegu. Zanim sięgnę po nożyczki, rozmawiamy o tym, jak chcesz wyglądać i ile czasu realnie masz rano na układanie. Przyjmuję od wtorku do soboty, wyłącznie po umówieniu.",
+    "heading": "Salon prowadzony przez jedną osobę"
+  },
+  "why_us": [
+    {
+      "title": "Jedna osoba, jeden klient",
+      "description": "Nie prowadzę dwóch foteli naraz, więc nie wychodzisz z niedokończoną fryzurą."
+    },
+    {
+      "title": "Wycena przed zabiegiem",
+      "description": "Cenę koloryzacji znasz przed rozpoczęciem, nie po."
+    },
+    {
+      "title": "Centrum Sieradza",
+      "description": "Dwie minuty od rynku, parking pod salonem."
+    }
+  ],
+  "_schema": 1,
+  "contact": {
+    "cta": "Zadzwoń — najszybciej odbieram między 9 a 17, od wtorku do soboty.",
+    "heading": "Umów wizytę telefonicznie"
   },
   "services": [
     {
-      "title": "Pielęgnacja twarzy",
-      "description": "Profesjonalne zabiegi oczyszczające i odżywcze dopasowane do potrzeb Twojej skóry."
+      "title": "Strzyżenie damskie",
+      "description": "Z modelowaniem i doradztwem, jak ułożyć fryzurę samodzielnie w domu."
     },
     {
-      "title": "Stylizacja i pielęgnacja",
-      "description": "Kompleksowa pielęgnacja dłoni, stóp i ciała z dbałością o każdy detal."
+      "title": "Koloryzacja",
+      "description": "Od odświeżenia odrostu po zmianę koloru. Zawsze z próbą i wyceną przed startem."
     },
     {
-      "title": "Zabiegi na ciało",
-      "description": "Relaksujące i pielęgnacyjne rytuały, które przywracają energię i dobre samopoczucie."
+      "title": "Pielęgnacja i regeneracja",
+      "description": "Zabiegi na włosy po rozjaśnianiu i po zimie. Efekt widać od pierwszej wizyty."
+    },
+    {
+      "title": "Strzyżenie męskie",
+      "description": "Klasycznie i krótko, maszynką lub nożyczkami. Bez czekania w kolejce."
     }
-  ],
-  "why_us": [
-    {
-      "title": "Indywidualne podejście",
-      "description": "Każdy zabieg dobieramy do Twoich potrzeb i oczekiwań — bez pośpiechu."
-    },
-    {
-      "title": "Higiena i bezpieczeństwo",
-      "description": "Pracujemy na sprawdzonych, wysokiej jakości preparatach i dbamy o pełną higienę."
-    },
-    {
-      "title": "Kameralna atmosfera",
-      "description": "U nas znajdziesz spokój, dyskrecję i czas przeznaczony tylko dla Ciebie."
-    }
-  ],
-  "contact": {
-    "heading": "Zarezerwuj czas dla siebie",
-    "cta": "Napisz lub zadzwoń — pomożemy dobrać zabieg i znaleźć dogodny termin."
-  }
+  ]
 }
