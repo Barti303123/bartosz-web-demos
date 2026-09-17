@@ -1,0 +1,48 @@
+{
+  "_schema": 1,
+  "meta": {
+    "title": "Salon urody i pielęgnacji",
+    "description": "Profesjonalne zabiegi kosmetyczne i pielęgnacyjne w przyjaznej atmosferze. Zadbaj o siebie — umów wizytę już dziś."
+  },
+  "hero": {
+    "title": "Zadbaj o siebie w dobrych rękach",
+    "subtitle": "Profesjonalne zabiegi pielęgnacyjne i kosmetyczne w kameralnej, przyjaznej atmosferze. Efekty, które widać i czuć.",
+    "cta": "Umów wizytę"
+  },
+  "about": {
+    "heading": "Miejsce, w którym czujesz się zadbana",
+    "body": "Jesteśmy lokalnym salonem, który łączy fachowość z ciepłym, indywidualnym podejściem do każdej klientki. Dbamy o komfort, higienę i naturalny efekt — tak, byś wyszła od nas zrelaksowana i zadowolona."
+  },
+  "services": [
+    {
+      "title": "Pielęgnacja twarzy",
+      "description": "Profesjonalne zabiegi oczyszczające i odżywcze dopasowane do potrzeb Twojej skóry."
+    },
+    {
+      "title": "Stylizacja i pielęgnacja",
+      "description": "Kompleksowa pielęgnacja dłoni, stóp i ciała z dbałością o każdy detal."
+    },
+    {
+      "title": "Zabiegi na ciało",
+      "description": "Relaksujące i pielęgnacyjne rytuały, które przywracają energię i dobre samopoczucie."
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Indywidualne podejście",
+      "description": "Każdy zabieg dobieramy do Twoich potrzeb i oczekiwań — bez pośpiechu."
+    },
+    {
+      "title": "Higiena i bezpieczeństwo",
+      "description": "Pracujemy na sprawdzonych, wysokiej jakości preparatach i dbamy o pełną higienę."
+    },
+    {
+      "title": "Kameralna atmosfera",
+      "description": "U nas znajdziesz spokój, dyskrecję i czas przeznaczony tylko dla Ciebie."
+    }
+  ],
+  "contact": {
+    "heading": "Zarezerwuj czas dla siebie",
+    "cta": "Napisz lub zadzwoń — pomożemy dobrać zabieg i znaleźć dogodny termin."
+  }
+}

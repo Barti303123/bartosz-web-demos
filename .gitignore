@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# podglady dem wlasnych — kopia robocza katalogu backend/system/demos/<slug>/,
+# odtwarzana przez preview-watcher przy kazdym starcie backendu. Zrodlo jest
+# w repo, wiec trzymanie tu drugiej kopii strony firmy to sam szum w diffie.
+/src/app/preview-demo-*
