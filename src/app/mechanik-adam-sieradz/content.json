@@ -1,0 +1,48 @@
+{
+  "_schema": 1,
+  "meta": {
+    "title": "Profesjonalny serwis samochodowy",
+    "description": "Diagnostyka, naprawy i przeglądy pojazdów. Rzetelnie, terminowo i uczciwie. Umów wizytę w naszym warsztacie."
+  },
+  "hero": {
+    "title": "Sprawne auto w dobrych rękach",
+    "subtitle": "Diagnostyka komputerowa, naprawy mechaniczne i przeglądy dla kierowców z regionu. Szybko, fachowo i bez ukrytych kosztów.",
+    "cta": "Umów wizytę"
+  },
+  "about": {
+    "heading": "Warsztat, któremu ufają kierowcy",
+    "body": "Jesteśmy lokalnym warsztatem samochodowym, który stawia na uczciwą diagnozę, przejrzyste ceny i solidną robotę. Dbamy o Twoje bezpieczeństwo na drodze — od rutynowego przeglądu po poważniejsze naprawy."
+  },
+  "services": [
+    {
+      "title": "Diagnostyka komputerowa",
+      "description": "Precyzyjnie lokalizujemy usterki dzięki nowoczesnej diagnostyce, zanim zaczniemy naprawę."
+    },
+    {
+      "title": "Naprawy mechaniczne",
+      "description": "Od układu hamulcowego po zawieszenie i silnik — naprawiamy sprawnie i z gwarancją jakości."
+    },
+    {
+      "title": "Przeglądy okresowe",
+      "description": "Kompleksowa obsługa serwisowa, która utrzyma Twój pojazd w niezawodnym stanie przez lata."
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Uczciwa wycena",
+      "description": "Zakres prac i koszty ustalamy z góry — bez niespodzianek na rachunku."
+    },
+    {
+      "title": "Szybki termin",
+      "description": "Sprawnie umawiamy wizyty i realizujemy naprawy, szanując Twój czas."
+    },
+    {
+      "title": "Lokalne zaufanie",
+      "description": "Obsługujemy kierowców z okolicy, którzy wracają do nas i polecają dalej."
+    }
+  ],
+  "contact": {
+    "heading": "Umów wizytę w warsztacie",
+    "cta": "Napisz lub zadzwoń — dobierzemy dogodny termin i doradzimy najlepsze rozwiązanie."
+  }
+}
