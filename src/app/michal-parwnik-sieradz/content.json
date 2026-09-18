@@ -1,0 +1,48 @@
+{
+  "_schema": 1,
+  "meta": {
+    "title": "Kancelaria prawna — profesjonalna pomoc",
+    "description": "Rzetelne doradztwo i reprezentacja prawna. Indywidualne podejście, dyskrecja i jasne warunki współpracy. Umów konsultację."
+  },
+  "hero": {
+    "title": "Profesjonalna pomoc prawna, na której możesz polegać",
+    "subtitle": "Zapewniamy rzetelne doradztwo i skuteczną reprezentację. Do każdej sprawy podchodzimy indywidualnie, z pełną dyskrecją i zaangażowaniem.",
+    "cta": "Umów konsultację"
+  },
+  "about": {
+    "heading": "Wiedza, doświadczenie i zaufanie",
+    "body": "Jesteśmy kancelarią, która stawia na rzetelność, jasną komunikację i indywidualne podejście do klienta. Wyjaśniamy zawiłości prawa prostym językiem i prowadzimy sprawy z pełnym zaangażowaniem oraz dyskrecją."
+  },
+  "services": [
+    {
+      "title": "Doradztwo prawne",
+      "description": "Rzetelne porady i opinie prawne, które pomagają podejmować bezpieczne decyzje."
+    },
+    {
+      "title": "Reprezentacja przed sądem",
+      "description": "Profesjonalne prowadzenie spraw i reprezentacja Twoich interesów na każdym etapie postępowania."
+    },
+    {
+      "title": "Umowy i dokumenty",
+      "description": "Sporządzanie, opiniowanie i negocjowanie umów oraz pism z dbałością o Twoje bezpieczeństwo."
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Indywidualne podejście",
+      "description": "Każdą sprawę analizujemy dokładnie i dobieramy rozwiązanie dopasowane do Twojej sytuacji."
+    },
+    {
+      "title": "Dyskrecja",
+      "description": "Gwarantujemy pełną poufność i profesjonalizm na każdym etapie współpracy."
+    },
+    {
+      "title": "Jasne warunki",
+      "description": "Zasady współpracy i koszty ustalamy przejrzyście, jeszcze przed rozpoczęciem sprawy."
+    }
+  ],
+  "contact": {
+    "heading": "Umów konsultację",
+    "cta": "Skontaktuj się z nami, aby omówić swoją sprawę — pomożemy znaleźć najlepsze rozwiązanie."
+  }
+}
