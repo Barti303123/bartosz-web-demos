@@ -30,33 +30,53 @@ const stylStatusu = (s) => (STATUSY.find((x) => x.id === s) || STATUSY[0]).klasa
 
 // Zgłoszenia celowo zwyczajne: tak wyglądają prawdziwe zapytania z formularza
 // lokalnej firmy. Żadnych "Lorem ipsum" i żadnych nazwisk prawdziwych ludzi.
+//
+// `doby` zastępuje datę: w prawdziwym panelu liczy się je z created_at.
+// Paweł czeka dwa dni celowo — bez jednego czerwonego zgłoszenia podgląd
+// nie pokazuje, po co jest licznik „czekają, aż oddzwonisz".
 const PRZYKLADOWE = [
     {
         id: 1, name: 'Marta Zielińska', phone: '+48 601 234 567', email: 'marta.z@example.com',
-        kiedy: 'dziś, 09:12', status: 'nowy',
+        kiedy: 'dziś, 09:12', doby: 0, status: 'nowy',
         message: 'Dzień dobry, czy da się umówić na jutro po 16? Najlepiej kontakt telefoniczny po 15.',
     },
     {
         id: 2, name: 'Paweł Nowicki', phone: '+48 602 887 100', email: 'p.nowicki@example.com',
-        kiedy: 'dziś, 08:40', status: 'nowy',
+        kiedy: '2 dni temu, 08:40', doby: 2, status: 'nowy',
         message: 'Interesuje mnie wycena. Proszę o kontakt mailowy, w pracy nie odbieram telefonu.',
     },
     {
         id: 3, name: 'Anna Krawczyk', phone: '+48 604 119 220', email: 'ania.krawczyk@example.com',
-        kiedy: 'wczoraj, 18:05', status: 'w kontakcie',
+        kiedy: 'wczoraj, 18:05', doby: 1, status: 'w kontakcie',
         message: 'Rozmawialiśmy w piątek — potwierdzam termin i proszę o adres z dojazdem.',
+        notatka: 'Oddzwoniłam — termin w środę o 10:00. Dzień wcześniej przypomnieć SMS-em.',
     },
     {
         id: 4, name: 'Tomasz Bąk', phone: '+48 605 330 441', email: 'tbak@example.com',
-        kiedy: 'wczoraj, 11:27', status: 'klient',
+        kiedy: 'wczoraj, 11:27', doby: 1, status: 'klient',
         message: 'Wszystko gotowe, dziękuję za sprawną obsługę. Polecę znajomym.',
+        notatka: 'Zrobione, zapłacone. Poprosić o opinię w Google.',
     },
     {
         id: 5, name: 'Jarosław P.', phone: '+48 600 000 000', email: 'oferta@example.com',
-        kiedy: '2 dni temu, 14:03', status: 'odrzucone',
+        kiedy: '3 dni temu, 14:03', doby: 3, status: 'odrzucone',
         message: 'Oferta pozycjonowania strony w Google, pierwsza pozycja w 30 dni.',
     },
+    {
+        id: 6, name: 'Katarzyna Lis', phone: '+48 607 450 912', email: 'k.lis@example.com',
+        kiedy: '5 dni temu, 10:48', doby: 5, status: 'klient',
+        message: 'Poproszę o termin w przyszłym tygodniu, najlepiej rano.',
+    },
 ];
+
+// Ta sama logika co w templates/client/src/app/panel/page.js — „czeka" to
+// status Nowy od co najmniej doby. Zmieniasz tam, zmień tu.
+const czekaOpis = (doby) => `czeka ${doby} ${doby === 1 ? 'dzień' : 'dni'}`;
+const MIESIAC_W = ['w styczniu', 'w lutym', 'w marcu', 'w kwietniu', 'w maju', 'w czerwcu',
+    'w lipcu', 'w sierpniu', 'we wrześniu', 'w październiku', 'w listopadzie', 'w grudniu'];
+// Poprzedni miesiąc jest wymyślony jak reszta danych; bieżący liczy się
+// z listy, żeby zmiana statusu w podglądzie od razu ruszała licznikami.
+const W_POPRZEDNIM = 4;
 
 const PRZYKLADOWE_POPRAWKI = [
     { id: 1, sekcja: 'Godziny otwarcia', kiedy: '3 dni temu', status: 'zrobiona',
@@ -80,6 +100,12 @@ export default function PanelDemo() {
     };
 
     const widoczne = filtr === 'wszystkie' ? zgloszenia : zgloszenia.filter((z) => z.status === filtr);
+    const teraz = new Date();
+    const miesiac = MIESIAC_W[teraz.getMonth()];
+    const poprzedni = MIESIAC_W[(teraz.getMonth() + 11) % 12];
+    const czekajacy = zgloszenia.filter((z) => z.status === 'nowy');
+    const najdluzej = czekajacy.reduce((m, z) => Math.max(m, z.doby), 0);
+    const klienci = zgloszenia.filter((z) => z.status === 'klient').length;
 
     return (
         <div className="min-h-screen bg-[#f7f8fa] text-[#16181d]"
@@ -138,6 +164,35 @@ export default function PanelDemo() {
 
             {zakladka === 'zgloszenia' ? (
                 <main className="mx-auto max-w-6xl px-6 py-8">
+                    <div className="mb-6 grid grid-cols-3 gap-2 sm:gap-3">
+                        {czekajacy.length > 0 ? (
+                            <button onClick={() => setFiltr('nowy')}
+                                className="rounded-2xl border border-red-200 bg-white p-3 text-left sm:p-5 transition hover:bg-red-50">
+                                <p className="text-xs font-medium leading-snug sm:text-sm text-red-700">Czekają, aż oddzwonisz</p>
+                                <p className="mt-1 text-2xl font-bold sm:text-3xl text-red-700">{czekajacy.length}</p>
+                                <p className="text-xs text-[#5b6270] sm:text-sm">
+                                    {najdluzej >= 1 ? `najdłużej ${najdluzej} ${najdluzej === 1 ? 'dzień' : 'dni'} · ` : ''}pokaż kto
+                                </p>
+                            </button>
+                        ) : (
+                            <div className="rounded-2xl border border-emerald-200 bg-white p-3 sm:p-5">
+                                <p className="text-xs font-medium leading-snug sm:text-sm text-emerald-700">Czekają, aż oddzwonisz</p>
+                                <p className="mt-1 text-2xl font-bold sm:text-3xl text-emerald-700">0</p>
+                                <p className="text-xs text-[#5b6270] sm:text-sm">Każdy, kto napisał, ma odpowiedź.</p>
+                            </div>
+                        )}
+                        <div className="rounded-2xl border border-[#e6e8ec] bg-white p-3 sm:p-5">
+                            <p className="text-xs font-medium leading-snug sm:text-sm">Zapytania {miesiac}</p>
+                            <p className="mt-1 text-2xl font-bold sm:text-3xl">{zgloszenia.length}</p>
+                            <p className="text-xs text-[#5b6270] sm:text-sm">{poprzedni}: {W_POPRZEDNIM}</p>
+                        </div>
+                        <div className="rounded-2xl border border-[#e6e8ec] bg-white p-3 sm:p-5">
+                            <p className="text-xs font-medium leading-snug sm:text-sm">Zostali Twoimi klientami</p>
+                            <p className="mt-1 text-2xl font-bold sm:text-3xl">{klienci}</p>
+                            <p className="text-xs text-[#5b6270] sm:text-sm">z zapytań {miesiac}</p>
+                        </div>
+                    </div>
+
                     <div className="mb-5 flex flex-wrap gap-2">
                         <Filtr aktywny={filtr === 'wszystkie'} onClick={() => setFiltr('wszystkie')}>
                             Wszystkie ({zgloszenia.length})
@@ -149,9 +204,17 @@ export default function PanelDemo() {
                         ))}
                     </div>
 
+                    {filtr === 'nowy' && czekajacy.length > 0 && (
+                        <p className="mb-4 rounded-xl border border-[#e6e8ec] bg-white px-4 py-3 text-sm text-[#5b6270]">
+                            Oddzwoniłeś? Zmień status na <strong>W kontakcie</strong> — osoba zniknie z tej listy.
+                        </p>
+                    )}
+
                     <ul className="space-y-3">
-                        {widoczne.map((z) => (
-                            <li key={z.id} className="rounded-2xl border border-[#e6e8ec] bg-white p-5">
+                        {widoczne.map((z) => {
+                            const czeka = z.status === 'nowy' && z.doby >= 1;
+                            return (
+                            <li key={z.id} className={`rounded-2xl border bg-white p-5 ${czeka ? 'border-red-200' : 'border-[#e6e8ec]'}`}>
                                 <div className="flex flex-wrap items-start justify-between gap-3">
                                     <div className="min-w-0">
                                         <p className="font-semibold">{z.name}</p>
@@ -159,7 +222,12 @@ export default function PanelDemo() {
                                             {z.phone} · {z.email}
                                         </p>
                                     </div>
-                                    <div className="flex items-center gap-3">
+                                    <div className="flex flex-wrap items-center gap-3">
+                                        {czeka && (
+                                            <span className="rounded-lg border border-red-200 bg-red-50 px-2.5 py-1 text-xs font-semibold text-red-700">
+                                                {czekaOpis(z.doby)}
+                                            </span>
+                                        )}
                                         <span className="text-xs text-[#5b6270]">{dataPL(z.kiedy)}</span>
                                         {/* Zmiana statusu działa — to jedyna rzecz, która w podglądzie
                                             jest prawdziwa, bo bez niej nie widać, po co ten panel jest. */}
@@ -175,14 +243,20 @@ export default function PanelDemo() {
                                     </div>
                                 </div>
                                 <p className="mt-4 border-t border-[#e6e8ec] pt-4 text-[15px] leading-relaxed">{z.message}</p>
+                                {/* Notatka działa naprawdę, ale tylko w tej karcie przeglądarki —
+                                    po odświeżeniu wraca przykład. Nic nie idzie do bazy. */}
+                                <Notatka tekst={z.notatka} zapisz={(t) => setZgloszenia((lista) =>
+                                    lista.map((x) => (x.id === z.id ? { ...x, notatka: t.trim() || null } : x)))} />
                             </li>
-                        ))}
+                            );
+                        })}
                     </ul>
 
                     <p className="mt-8 rounded-2xl border border-[#e6e8ec] bg-white px-6 py-5 text-sm text-[#5b6270]">
                         Każde zapytanie z formularza na stronie trafia tutaj <strong>i równolegle na Twojego maila</strong> —
-                        nawet gdybyś do panelu nie zaglądał. Statusy ustawiasz sam, żeby wiedzieć, z kim już rozmawiałeś.
-                        Całość pobierzesz do pliku, który otworzysz w Excelu.
+                        nawet gdybyś do panelu nie zaglądał. Na górze widzisz, kto czeka na Twój telefon i ilu klientów
+                        dała Ci strona w tym miesiącu. Przy każdej osobie zapiszesz notatkę, żeby po tygodniu pamiętać,
+                        o czym rozmawialiście. Całość pobierzesz do pliku, który otworzysz w Excelu.
                     </p>
                 </main>
             ) : (
@@ -248,6 +322,51 @@ export default function PanelDemo() {
                 Podgląd panelu zgłoszeń · <a href="https://bartosz-web.pl" className="text-[#1d4ed8] hover:underline">bartosz-web.pl</a>
             </footer>
         </div>
+    );
+}
+
+function Notatka({ tekst, zapisz }) {
+    const [edycja, setEdycja] = useState(false);
+    const [wartosc, setWartosc] = useState(tekst || '');
+
+    if (edycja) {
+        return (
+            <div className="mt-3 border-t border-[#e6e8ec] pt-3">
+                <textarea autoFocus rows={3} maxLength={2000} value={wartosc}
+                    onChange={(e) => setWartosc(e.target.value)}
+                    placeholder="np. Oddzwoniłem, chce wycenę na wtorek."
+                    className="w-full resize-none rounded-xl border border-[#e6e8ec] px-4 py-3 text-[15px] outline-none focus:border-[#1d4ed8]" />
+                <div className="mt-2 flex gap-2">
+                    <button onClick={() => { zapisz(wartosc); setEdycja(false); }}
+                        className="rounded-lg bg-[#1d4ed8] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#1e40af]">
+                        Zapisz notatkę
+                    </button>
+                    <button onClick={() => { setWartosc(tekst || ''); setEdycja(false); }}
+                        className="rounded-lg border border-[#e6e8ec] px-4 py-2 text-sm font-medium transition hover:bg-[#f7f8fa]">
+                        Anuluj
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
+    if (tekst) {
+        return (
+            <div className="mt-3 rounded-xl bg-amber-50 px-4 py-3 text-sm leading-relaxed">
+                <p className="whitespace-pre-wrap"><strong>Twoja notatka:</strong> {tekst}</p>
+                <button onClick={() => { setWartosc(tekst); setEdycja(true); }}
+                    className="mt-1 text-sm font-medium text-[#5b6270] underline underline-offset-4 hover:text-[#16181d]">
+                    Edytuj
+                </button>
+            </div>
+        );
+    }
+
+    return (
+        <button onClick={() => { setWartosc(''); setEdycja(true); }}
+            className="mt-3 text-sm font-medium text-[#5b6270] underline underline-offset-4 hover:text-[#16181d]">
+            + Dodaj notatkę
+        </button>
     );
 }
 
