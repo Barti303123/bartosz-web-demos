@@ -88,6 +88,40 @@ const PRZYKLADOWE_POPRAWKI = [
 
 const dataPL = (k) => k;
 
+// Zakladka „Twoja strona" na wymyslonej firmie w polowie budowy. Daty licza
+// sie od dzisiaj, zeby podglad nigdy nie pokazywal terminu z przeszlosci.
+// Tekst etapow jak w templates/client/src/lib/etapy.js — zmieniasz tam, zmien tu.
+function przykladStrony() {
+    const dzien = (przesuniecie) => {
+        const d = new Date();
+        d.setDate(d.getDate() + przesuniecie);
+        return d.toLocaleDateString('pl-PL', { day: 'numeric', month: 'long' });
+    };
+    return {
+        etapy: [
+            { id: 'umowa', tytul: 'Umowa podpisana', stan: 'zrobione', opis: `Podpisana ${dzien(-9)}.` },
+            { id: 'zaliczka', tytul: 'Zaliczka', stan: 'zrobione', opis: `Wpłata 500 zł dotarła ${dzien(-8)}.` },
+            { id: 'materialy', tytul: 'Materiały od Ciebie', stan: 'zrobione', opis: `Komplet dotarł ${dzien(-4)}. Od tego dnia liczy się termin.` },
+            { id: 'budowa', tytul: 'Budowa strony', stan: 'teraz', opis: `Strona będzie gotowa do akceptacji najpóźniej ${dzien(10)}.` },
+            { id: 'akceptacja', tytul: 'Twoja akceptacja', stan: 'pozniej', opis: 'Dostaniesz link do gotowej strony i 7 dni na uwagi.' },
+            { id: 'domena', tytul: 'Strona na Twojej domenie', stan: 'pozniej', opis: 'Podpinam Twoją domenę tak, żeby nie popsuć firmowej poczty.' },
+            { id: 'szkolenie', tytul: 'Szkolenie z panelu', stan: 'pozniej', opis: 'Kilkanaście minut razem: pokazuję panel, a hasło ustawiasz sam, przy mnie.' },
+        ],
+        umowa: [
+            ['Umowa z dnia', dzien(-9)],
+            ['Cena strony', '1000 zł'],
+            ['Zaliczka (50%)', `500 zł — zapłacone ${dzien(-8)}`],
+            ['Druga połowa', '500 zł — dopiero po odbiorze strony'],
+            ['Termin', '10 dni roboczych od kompletu materiałów'],
+            ['Poprawki przy budowie', 'dwie rundy w cenie'],
+            ['Opieka', 'pakiet Podstawowa, 50 zł miesięcznie'],
+            ['Drobne poprawki w opiece', '2 miesięcznie'],
+            ['Reakcja na awarię', 'do 48 godzin roboczych'],
+            ['Wypowiedzenie opieki', '30 dni'],
+        ],
+    };
+}
+
 export default function PanelDemo() {
     const [zgloszenia, setZgloszenia] = useState(PRZYKLADOWE);
     const [filtr, setFiltr] = useState('wszystkie');
@@ -121,7 +155,7 @@ export default function PanelDemo() {
                 <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4">
                     <div>
                         <h1 className="text-lg font-bold tracking-tight">
-                            {zakladka === 'zgloszenia' ? 'Twoje zgłoszenia' : 'Poprawki na stronie'}
+                            {{ zgloszenia: 'Twoje zgłoszenia', poprawki: 'Poprawki na stronie', strona: 'Twoja strona' }[zakladka]}
                         </h1>
                         <p className="text-sm text-[#5b6270]">kontakt@twojafirma.pl</p>
                     </div>
@@ -142,10 +176,10 @@ export default function PanelDemo() {
                         </button>
                     </div>
                 </div>
-                <div className="mx-auto flex max-w-6xl gap-1 px-6">
-                    {[['zgloszenia', 'Zgłoszenia'], ['poprawki', 'Poprawki na stronie']].map(([id, etykieta]) => (
+                <div className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-6">
+                    {[['zgloszenia', 'Zgłoszenia'], ['poprawki', 'Poprawki na stronie'], ['strona', 'Twoja strona']].map(([id, etykieta]) => (
                         <button key={id} onClick={() => setZakladka(id)}
-                            className={`-mb-px border-b-2 px-4 py-3 text-sm font-medium transition ${
+                            className={`-mb-px whitespace-nowrap border-b-2 px-4 py-3 text-sm font-medium transition ${
                                 zakladka === id
                                     ? 'border-[#1d4ed8] text-[#1d4ed8]'
                                     : 'border-transparent text-[#5b6270] hover:text-[#16181d]'
@@ -162,7 +196,9 @@ export default function PanelDemo() {
                 </div>
             )}
 
-            {zakladka === 'zgloszenia' ? (
+            {zakladka === 'strona' ? (
+                <TwojaStrona dane={przykladStrony()} />
+            ) : zakladka === 'zgloszenia' ? (
                 <main className="mx-auto max-w-6xl px-6 py-8">
                     <div className="mb-6 grid grid-cols-3 gap-2 sm:gap-3">
                         {czekajacy.length > 0 ? (
@@ -322,6 +358,59 @@ export default function PanelDemo() {
                 Podgląd panelu zgłoszeń · <a href="https://bartosz-web.pl" className="text-[#1d4ed8] hover:underline">bartosz-web.pl</a>
             </footer>
         </div>
+    );
+}
+
+function TwojaStrona({ dane }) {
+    const teraz = dane.etapy.find((e) => e.stan === 'teraz');
+    return (
+        <main className="mx-auto max-w-6xl px-6 py-8">
+            <div className="mb-6 rounded-2xl border border-[#1d4ed8] bg-white p-5">
+                <p className="text-sm font-medium text-[#1d4ed8]">Teraz</p>
+                <p className="mt-1 text-lg font-bold">{teraz.tytul}</p>
+                <p className="mt-1 leading-relaxed text-[#5b6270]">{teraz.opis}</p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px]">
+                <section>
+                    <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-[#5b6270]">Postęp prac</p>
+                    <ol className="space-y-1">
+                        {dane.etapy.map((e) => (
+                            <li key={e.id} className="flex gap-4 rounded-2xl p-3">
+                                <span className={`mt-0.5 grid h-6 w-6 flex-shrink-0 place-items-center rounded-full border-2 text-xs font-bold ${
+                                    e.stan === 'zrobione' ? 'border-emerald-500 bg-emerald-500 text-white'
+                                        : e.stan === 'teraz' ? 'border-[#1d4ed8] bg-white text-[#1d4ed8]'
+                                            : 'border-[#e6e8ec] bg-white text-transparent'}`}>
+                                    {e.stan === 'zrobione' ? '✓' : e.stan === 'teraz' ? '●' : ''}
+                                </span>
+                                <div className="min-w-0">
+                                    <p className={`font-semibold ${e.stan === 'pozniej' ? 'text-[#5b6270]' : ''}`}>{e.tytul}</p>
+                                    <p className="mt-0.5 text-sm leading-relaxed text-[#5b6270]">{e.opis}</p>
+                                </div>
+                            </li>
+                        ))}
+                    </ol>
+                </section>
+
+                <aside>
+                    <div className="rounded-2xl border border-[#e6e8ec] bg-white p-6">
+                        <p className="font-semibold">Umowa w skrócie</p>
+                        <dl className="mt-4 space-y-3 text-sm">
+                            {dane.umowa.map(([co, ile]) => (
+                                <div key={co}>
+                                    <dt className="text-[#5b6270]">{co}</dt>
+                                    <dd className="font-medium">{ile}</dd>
+                                </div>
+                            ))}
+                        </dl>
+                        <p className="mt-5 border-t border-[#e6e8ec] pt-4 text-xs leading-relaxed text-[#5b6270]">
+                            Od podpisania umowy do szkolenia widzisz tu, na jakim etapie jest Twoja strona,
+                            do kiedy będzie gotowa i co już zapłaciłeś — bez dzwonienia i szukania maili.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </main>
     );
 }
 
